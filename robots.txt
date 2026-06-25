@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mehmetcanbaykan.github.io/sitemap.xml
+Sitemap: https://meviza.github.io/mehmetcanbaykan/sitemap.xml

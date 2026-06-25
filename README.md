@@ -2,8 +2,8 @@
 
 Kişisel portföy, kurumsal tanıtım sitesi ve yönetim paneli. Siirt ve çevresi için optimize edilmiş, mobil uyumlu, WhatsApp odaklı, SEO + GEO hazır, **Supabase ile tam senkronize**.
 
-**Canlı URL:** `https://mehmetcanbaykan.github.io/`
-**Admin:** `https://mehmetcanbaykan.github.io/admin.html`
+**Canlı URL:** `https://meviza.github.io/mehmetcanbaykan/`
+**Admin:** `https://meviza.github.io/mehmetcanbaykan/admin.html`
 
 ## Yapı
 
@@ -42,7 +42,7 @@ Kişisel portföy, kurumsal tanıtım sitesi ve yönetim paneli. Siirt ve çevre
 1. **Yeni public repo** → `mehmetcanbaykan`
 2. Tüm dosyaları push'la
 3. Settings → Pages → Source: `main` / root
-4. Birkaç dakika sonra `https://mehmetcanbaykan.github.io/`
+4. Birkaç dakika sonra `https://meviza.github.io/mehmetcanbaykan/`
 
 ## Supabase Kurulumu (opsiyonel ama önerilen)
 
@@ -127,7 +127,7 @@ Web formundan gelen müşteri mesajları. Admin'de durum (new/read/replied/archi
 - `robots.txt` + `sitemap.xml`
 - Her proje detay sayfası kendi meta etiketlerini dinamik üretir
 
-**Google Search Console'a kayıt:** [search.google.com/search-console](https://search.google.com/search-console) → `mehmetcanbaykan.github.io` → sitemap gönder.
+**Google Search Console'a kayıt:** [search.google.com/search-console](https://search.google.com/search-console) → `meviza.github.io/mehmetcanbaykan` → sitemap gönder.
 
 ## Özelleştirme
 
