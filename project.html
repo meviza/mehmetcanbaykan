@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f0f0f" />
+  <meta name="robots" content="index, follow" />
+
+  <title id="pageTitle">Proje | Mehmet Can Baykan — Mimar</title>
+  <meta name="description" id="pageDesc" content="Mehmet Can Baykan mimarlık projesi detayları." />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" id="ogTitle" content="Proje | Mehmet Can Baykan Mimar" />
+  <meta property="og:description" id="ogDesc" content="" />
+  <meta property="og:image" id="ogImage" content="" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+  <link rel="stylesheet" href="assets/css/pages.css" />
+</head>
+
+<body>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-mark">MCB</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <header class="nav is-scrolled" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">MCB</span>
+        <span class="brand-text">Mehmet Can Baykan<small>Mimar</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="index.html#hakkimda">Hakkımda</a>
+        <a href="index.html#hizmetler">Hizmetler</a>
+        <a href="index.html#projeler">Projeler</a>
+        <a href="index.html#surec">Maliyet &amp; Ruhsat</a>
+        <a href="index.html#iletisim">İletişim</a>
+      </nav>
+      <a href="https://wa.me/905427351316?text=Merhaba%20Mehmet%20Can%20Bey%2C%20projeniz%20hakk%C4%B1nda%20konu%C5%9Fmak%20isterim." target="_blank" rel="noopener" class="nav-cta">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+        Hemen Yaz
+      </a>
+    </div>
+  </header>
+
+  <main class="blog-post">
+    <div class="container">
+      <a href="index.html#projeler" class="back-link" data-aos="fade-up">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Tüm Projeler
+      </a>
+
+      <div class="post-loading" id="postLoading">Yükleniyor…</div>
+
+      <article class="post" id="postContent" hidden>
+        <div class="post-header" data-aos="fade-up">
+          <span class="post-category" id="postCategory"></span>
+          <h1 class="post-title" id="postTitleHeader"></h1>
+          <p class="post-summary" id="postSummary"></p>
+        </div>
+
+        <div class="post-cover" data-aos="fade-up" data-aos-delay="100">
+          <img id="postCover" src="" alt="" />
+        </div>
+
+        <div class="post-meta" data-aos="fade-up" data-aos-delay="200">
+          <div><strong>Yıl</strong><span id="postYear"></span></div>
+          <div><strong>Konum</strong><span id="postLocation"></span></div>
+          <div><strong>Alan</strong><span id="postArea"></span></div>
+          <div><strong>Süre</strong><span id="postDuration"></span></div>
+          <div><strong>Durum</strong><span id="postStatus"></span></div>
+        </div>
+
+        <div class="post-body" id="postBody" data-aos="fade-up"></div>
+
+        <div class="post-cta" data-aos="fade-up">
+          <h3>Benzer bir proje mi planlıyorsunuz?</h3>
+          <p>Ücretsiz ön görüşme için hemen yazın.</p>
+          <a id="postWhatsapp" href="#" target="_blank" rel="noopener" class="btn btn-primary">
+            <span>WhatsApp'tan İletişim</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">MCB</span>
+        <p>Mehmet Can Baykan — Mimar<br/>Siirt, Türkiye</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html#hakkimda">Hakkımda</a>
+        <a href="index.html#hizmetler">Hizmetler</a>
+        <a href="index.html#projeler">Projeler</a>
+        <a href="index.html#iletisim">İletişim</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="https://wa.me/905427351316" target="_blank" rel="noopener">+90 542 735 13 16</a>
+        <small>© <span data-year>2026</span> Tüm hakları saklıdır.</small>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/905427351316?text=Merhaba%20Mehmet%20Can%20Bey%2C%20web%20sitenizden%20yaz%C4%B1yorum." target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script type="module" src="assets/js/detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,560 @@
+{
+  "projects": [
+    {
+      "id": "rest-01",
+      "title": "Tarihi Konak Restorasyonu",
+      "category": "restorasyon",
+      "categoryLabel": "Restorasyon",
+      "year": 2024,
+      "location": "Siirt Merkez",
+      "area": "320 m²",
+      "duration": "8 ay",
+      "status": "Tamamlandı",
+      "summary": "Osmanlı dönemi taş konak, geleneksel malzemeyle aslına uygun şekilde yeniden ayağa kaldırıldı.",
+      "image": "assets/images/projects/rest-01.jpg",
+      "tags": ["Taş duvar", "Cephe restorasyonu", "Güçlendirme"],
+      "content": {
+        "intro": "Siirt merkezde 19. yüzyıl sonunda inşa edilmiş iki katlı taş konağın, geçirdiği depremler ve bakımsızlık nedeniyle taşıyıcı sistemi zayıflamış, sıvaları dökülmüş, doğramaları çürümüştü. Mevcut durum tespiti üç hafta sürdü; her taş, her hatıl, her geçme detayı tek tek numaralandırıldı.",
+        "climate": "Siirt'in karasal ikliminde yıllık sıcaklık farkı 35°C'yi aşıyor. Yazın 40°C'ye çıkan sıcaklarda kalın taş duvarlar (60-80 cm) iç mekanı 22-25°C arasında tutuyor. Bu pasif termal kütle, restorasyon projesinin ana koruma gerekçesi oldu — duvarları söküp yeniden örmek yerine, mevcut taşları yerinde onardık ve nefes alabilir kireç harcıyla sıvadık.",
+        "soil": "Parsel, dere yatağı kenarında alüvyonel bir zeminde. Zemin etüdü 0-2 m arası killi-siltli, 2-6 m arası sıkı kum-çakıl, 6 m sonrası anakaya olarak geldi. Temel altında 80 cm çapında 6 adet fore kazık ile güçlendirme yapıldı; radyal temel yenilendi.",
+        "neighborhood": "Yapı, geleneksel Siirt evleri dokusu içinde bitişik nizamda yer alıyor. Sokak genişliği 2.8 m, karşılıklı iki katlı cepheler 'sokak silueti' oluşturuyor. Komşu yapıların yüksekliği ve çıkma hatları titizlikle korundu; yeni doğramaların boyut ve oranları sokak ritmine uygun seçildi.",
+        "regulations": "Koruma amaçlı imar planı kapsamında 1/1 ölçekli rölöve, restitüsyon ve restorasyon projeleri hazırlandı. Koruma Bölge Kurulu onayı ve Siirt Belediyesi ruhsatı alındı. Taş, ahşap, demir ve sıva gibi orijinal malzemeler önceliklendirildi; betonarme sadece gizli güçlendirme elemanı olarak kullanıldı.",
+        "equations": "Yaklaşık ısıl kütle hesabı: 0.7 m × 18 kN/m³ × 320 m² cephesi ≈ 4 MJ/K termal kapasite. Bu, günlük ısı geciktirme fazını 8-10 saate çıkararak yaz geceleri doğal soğutma sağlıyor. Yıllık soğutma yükü ~45 kWh/m², modern betonarme bir yapıya göre %60 düşük.",
+        "process": [
+          "Mevcut durum tespiti ve rölöve (3 hafta)",
+          "Zemin etüdü ve statik analiz (2 hafta)",
+          "Restitüsyon ve restorasyon projeleri (1 ay)",
+          "Koruma Kurulu onayı (1.5 ay)",
+          "Güçlendirme ve cephe yenileme (4 ay)",
+          "İç mekan ve elektrik/mekanik tesisat (2 ay)"
+        ],
+        "outcome": "Yapı, hem konut hem küçük ölçekli kültürel etkinlik alanı olarak kullanılmak üzere sahibine teslim edildi. Yıllık enerji tüketimi, modern muadiline göre %55 daha düşük ölçüldü."
+      }
+    },
+    {
+      "id": "rest-02",
+      "title": "Cami Minaresi Restorasyonu",
+      "category": "restorasyon",
+      "categoryLabel": "Restorasyon",
+      "year": 2023,
+      "location": "Tillo",
+      "area": "Minare yüksekliği 28 m",
+      "duration": "5 ay",
+      "status": "Tamamlandı",
+      "summary": "Tillo'da 16. yüzyıldan kalma cami minaresinin taş külahı ve şerefe döşemesi aslına uygun yenilendi.",
+      "image": "assets/images/projects/rest-02.jpg",
+      "tags": ["Tarihi yapı", "Minare", "Taş külah"],
+      "content": {
+        "intro": "İbrahim Hakkı Hz. türbesi yakınındaki tarihi caminin minaresinde, 1990'lı yıllardaki hatalı beton müdahalesi nedeniyle çatlaklar ve sıva dökülmeleri oluşmuştu. Külah bölümünde donma-çözülme hasarı kritik seviyedeydi.",
+        "climate": "Tillo rakımı 1100 m. Kış aylarında -15°C, yaz aylarında +35°C görülüyor. Yıllık 80-100 donma-çözülme çevrimi, gözenekli taş malzemede mikro çatlaklar oluşturuyor. Minarenin külah kısmı 'doğal taş kaplama + nefes alır sıva' sistemiyle yeniden inşa edildi.",
+        "soil": "Minare temeli, yamaç molozu üzerinde oturuyor. Yüzey suları temele doğru sızıntı yapıyordu. Çevre drenajı yeniden düzenlendi; temel etrafında 60 cm derinlikte geotekstil kaplı çakıl drenaj hattı oluşturuldu.",
+        "neighborhood": "Tillo, koruma altındaki tarihi bir yerleşim. Minare silueti, çevredeki türbe ve evlerle birlikte sit alanı görünümünü belirliyor. Külahın oranı (çap/yükseklik ≈ 1/1.4) orijinal fotoğraflardan ve kalıntı izlerinden çıkarıldı.",
+        "regulations": "Koruma Bölge Kurulu kararıyla birlikte Vakıflar Bölge Müdürlüğü onayı alındı. Uygulama, Vakıflar Uzman Mimarı gözetiminde yapıldı. Her aşama fotoğraflı raporla kayıt altına alındı.",
+        "equations": "Rüzgar yükü: 28 m yükseklik için 50 m/s rüzgarda yaklaşık 12 kN/m² yüzey basıncı. Silindirik gövdede rüzgar yükü yarıya iniyor, ancak külahın konik geometrisi yüzey alanını artırıyor. Taş kalınlığı 25 cm, çimento içermeyen doğal hidrolik kireç harcıyla bağlandı.",
+        "process": [
+          "Detaylı rölöve ve hasar tespiti (1 hafta)",
+          "Koruma Kurulu ve Vakıflar onayı (6 hafta)",
+          "İskele kurulumu ve külah sökümü (2 hafta)",
+          "Taş kaplama ve kireç harcı uygulaması (6 hafta)",
+          "Şerefe döşemesi ve kurşun kaplama (3 hafta)",
+          "LED aydınlatma ve dış cephe temizliği (2 hafta)"
+        ],
+        "outcome": "Minare, Tillo'nun tarihi silüetine yeniden kazandırıldı. Yapısal izleme için 4 noktada çatlak ölçer sensör yerleştirildi; veriler 5 yıl boyunca izlenecek."
+      }
+    },
+    {
+      "id": "rest-03",
+      "title": "Taş Hamam Konservasyonu",
+      "category": "restorasyon",
+      "categoryLabel": "Restorasyon",
+      "year": 2023,
+      "location": "Baykan",
+      "area": "180 m²",
+      "duration": "6 ay",
+      "status": "Tamamlandı",
+      "summary": "Baykan'da 18. yüzyıldan kalma hamamın sıcaklık ve ılıklık bölümleri, kireç bazlı sıva ve orijinal tonlarda restore edildi.",
+      "image": "assets/images/projects/rest-03.jpg",
+      "tags": ["Hamam", "Sıcaklık", "Kireç sıva"],
+      "content": {
+        "intro": "Baykan ilçe merkezinde terk edilmiş hamam yapısının soğukluk bölümü çökmüş, sıcaklık bölümü kubbesi çatlamıştı. Yapı, Vakıflar mülkiyetinde olup yeniden işlevlendirme (kültür merkezi) hedefiyle ele alındı.",
+        "climate": "Baykan'ın rakımı 800 m, nispi nem yazın %30'a düşer. Kubbelerde ısı farkından kaynaklanan termal gerilmeler belirgin. Yapının nefes alabilirliği esastı; modern çimento sıva kullanılması reddedildi.",
+        "soil": "Yapı zemini geçirimsiz kil tabaka. Orijinalde 'gözyaşı drenajı' denen kubbe diplerindeki deliklerle su tahliyesi sağlanıyordu. Bu sistem temizlendi ve aktif hale getirildi.",
+        "neighborhood": "Baykan merkez, küçük ölçekli tarihi yapılarla çevrili. Hamamın giriş cephesi, çevre yapıların saçak seviyeleriyle uyumlu tutuldu.",
+        "regulations": "Koruma Bölge Kurulu onayı + Vakıflar Genel Müdürlüğü restorasyon şartnamesi. Her sıva katmanı ayrı formülle (kireç + pomza + keten lifi) uygulandı.",
+        "equations": "Kubbe yüzey alanı: 4πr² formülüyle r=2.6 m için yaklaşık 21 m² yüzey. Kalınlığı 30 cm olan kubbe, termal kütle olarak iç ortam sıcaklığını günde 4-5°C yumuşatıyor.",
+        "process": [
+          "Rölöve ve malzeme analizi (2 hafta)",
+          "Statik güçlendirme projesi (3 hafta)",
+          "Kurul onayı (2 ay)",
+          "Sıcaklık kubbesi onarımı (6 hafta)",
+          "Sıva ve kalem işi (4 hafta)",
+          "Tesisat ve aydınlatma (3 hafta)"
+        ],
+        "outcome": "Hamam, ilçenin küçük ölçekli kültürel etkinliklerine ev sahipliği yapmaya başladı. Yılda 12 sergi ve 30'a yakın söyleşi düzenleniyor."
+      }
+    },
+    {
+      "id": "ic-01",
+      "title": "Modern Villa İç Mekanı",
+      "category": "ic-tasarim",
+      "categoryLabel": "İç Tasarım",
+      "year": 2024,
+      "location": "Kurtalan",
+      "area": "240 m²",
+      "duration": "4 ay",
+      "status": "Tamamlandı",
+      "summary": "Açık plan mutfak-salon, doğal ışık optimizasyonu ve doğal malzeme paletiyle yeniden tasarlandı.",
+      "image": "assets/images/projects/ic-01.jpg",
+      "tags": ["Açık plan", "Doğal ışık", "Modern"],
+      "content": {
+        "intro": "2010 yapımı villanın iç mekanı, dar pencere açıklıkları ve karanlık koridorları nedeniyle gün ışığından yeterince yararlanamıyordu. Sahipleri, dört çocuklu bir aile olarak sosyal alanları genişletmek istiyordu.",
+        "climate": "Kurtalan'da yaz sıcaklıkları 42°C'ye çıkıyor. İç mekanın serin kalması için önce dış kabuk iyileştirildi: çift cam low-e kaplamalı doğramalar, çatıya 8 cm XPS yalıtım, güney cephede 1.5 m çıkma ile gölgeleme.",
+        "soil": "Villa temeli radye temel. İç mekan müdahalesinde temele dokunulmadı; tüm değişiklikler döşeme üstü ve asma tavan çözümleriyle gerçekleştirildi.",
+        "neighborhood": "Villa, sit alanı dışında yeni gelişen bir mahallede. Komşu yapı yükseklikleri 2-3 kat, villanın bahçe kullanımı için yeterli mesafe var.",
+        "regulations": "İç mekan tadilatı olduğu için ruhsat gerektirmedi. Ancak doğrama değişikliği ve dış cephe müdahalesi için belediyeye bilgi verildi.",
+        "equations": "Gün ışığı faktörü (DF): Salon için minimum %2 hedeflendi. Açık plan + pencere büyütme + ışık tüneli (ocak üstü) ile DF %3.4'e çıktı. Yıllık aydınlatma enerjisi tasarrufu: ~%40.",
+        "process": [
+          "Eksik ölçüm ve mevcut durum analizi (1 hafta)",
+          "Konsept ve malzeme paleti (2 hafta)",
+          "Mobilya ve dolap tasarımı (3 hafta)",
+          "Uygulama projesi (2 hafta)",
+          "Yıkım ve altyapı (2 hafta)",
+          "Kaba ve ince işçilik (10 hafta)",
+          "Mobilya montajı ve teslim (2 hafta)"
+        ],
+        "outcome": "Sahipleri, özellikle kış aylarında bile doğal ışıkla aydınlanan geniş salonun keyfini çıkarıyor. Enerji faturası, önceki konfigürasyona göre %32 düştü."
+      }
+    },
+    {
+      "id": "ic-02",
+      "title": "Cafe & Restoran İç Tasarımı",
+      "category": "ic-tasarim",
+      "categoryLabel": "İç Tasarım",
+      "year": 2022,
+      "location": "Siirt Merkez",
+      "area": "160 m²",
+      "duration": "3 ay",
+      "status": "Tamamlandı",
+      "summary": "Endüstriyel estetikle geleneksel ahşap detayları buluşturan, mahalle dokusuna uyumlu bir cafe mekanı.",
+      "image": "assets/images/projects/ic-02.jpg",
+      "tags": ["Endüstriyel", "Ahşap", "Cafe"],
+      "content": {
+        "intro": "Siirt merkezde tarihi bir hanın zemin katındaki dükkan, cafe-restorana dönüştürüldü. Yüksek tavan (4.2 m) ve orijinal taş duvarlar korundu; servis alanı modern, oturma alanı sıcak-samimi tasarlandı.",
+        "climate": "Cafe, yazın 40°C'yi aşan sıcaklarda yoğun kullanılıyor. Mekanın pasif soğutulması için tavan pervaneleri (HVLS), doğal havalandırma bacaları ve yüksek ısıl kütleli taş duvarlar kullanıldı.",
+        "soil": "Mevcut zemin, sıkıştırılmış toprak üzerine beton şap. Zemin kaplaması olarak orijinal görünümlü mat beton ve sıcak bölgelerde doğal meşe kullanıldı.",
+        "neighborhood": "Tarihi hanın bulunduğu sokak, çarşı dokusunun ana arterlerinden biri. Cafe cephesi, sokaktaki yayalara oturma imkanı verecek şekilde tasarlandı.",
+        "regulations": "Tarihi yapı olduğu için Koruma Kurulu onayı alındı. Yangın güvenliği için sprinkle sistemi ve acil çıkış düzenlendi. İşletme ruhsatı için hijyen ve havalandına raporları hazırlandı.",
+        "equations": "Oturma kapasitesi: 1.2 m²/kişi (cafe standardı) ile ~50 kişi. Mutfak servis alanı 35 m², depolama 18 m². Aydınlatma: 200 lux genel, 300 lux bar tezgahı.",
+        "process": [
+          "Konsept geliştirme (1 hafta)",
+          "Mekan planlaması (2 hafta)",
+          "Malzeme seçimi (1 hafta)",
+          "İmalat ve mobilya (4 hafta)",
+          "Saha uygulaması (4 hafta)",
+          "Test ve açılış (1 hafta)"
+        ],
+        "outcome": "Cafe, açıldığı günden itibaren mahallenin buluşma noktası oldu. Hafta sonu yoğunluğu günde 250-300 müşteriye ulaşıyor."
+      }
+    },
+    {
+      "id": "ic-03",
+      "title": "Muhtarlık Ofisi Tasarımı",
+      "category": "ic-tasarim",
+      "categoryLabel": "İç Tasarım",
+      "year": 2024,
+      "location": "Şirvan",
+      "area": "85 m²",
+      "duration": "2 ay",
+      "status": "Tamamlandı",
+      "summary": "Küçük ölçekli bir kamu ofisinin, mahallelinin kendini rahat hissedeceği sıcak bir bekleme alanıyla yeniden tasarımı.",
+      "image": "assets/images/projects/ic-03.jpg",
+      "tags": ["Kamu", "Ofis", "Erişilebilirlik"],
+      "content": {
+        "intro": "Şirvan'ın kırsal bir mahallesinde muhtarlık binasının zemin katı, hem ofis hem toplantı hem bekleme alanı olarak çok amaçlı kullanılıyordu. Alan dağınıktı ve mahalleli için konforlu değildi.",
+        "climate": "Şirvan'da kış ayları sert geçer (-10°C). Bekleme alanının konforu için yerden ısıtma düşünüldü; ancak mevcut kazan kapasitesinin yetersizliği nedeniyle, alan yalıtımı önceliklendirildi.",
+        "soil": "Betonarme temel üzerinde mozaik parke zemin. Yenileme sırasında nem bariyeri eklendi ve laminant parke ile değiştirildi.",
+        "neighborhood": "Mahalle dokusu, alçak katlı yapılardan oluşuyor. Bekleme alanı, mahallelinin yaşlı-çocuk fark etmeksizin rahatça kullanabileceği şekilde düzenlendi.",
+        "regulations": "Kamu binası olduğu için erişilebilirlik yönetmeliğine uyuldu: rampa, tutunma barları, 1.20 m koridor genişliği. Yangın çıkışı yeniden düzenlendi.",
+        "equations": "Bekleme alanı kapasitesi: 1.5 m²/kişi × 25 m² = ~16 kişi. Bu, mahalleye cumartesi toplantıları için yeterli. Aydınlatma: 300 lux tezgah, 200 lux bekleme.",
+        "process": [
+          "Kullanıcı görüşmeleri (1 hafta)",
+          "Konsept ve planlama (1 hafta)",
+          "Mobilya ve tezgah tasarımı (2 hafta)",
+          "Uygulama (4 hafta)",
+          "Erişilebilirlik testi (3 gün)"
+        ],
+        "outcome": "Mahalleli, özellikle kadın ve yaşlıların toplantı katılımı %40 arttı. Ofis artık sadece resmi işlem değil, sosyal buluşma için de kullanılıyor."
+      }
+    },
+    {
+      "id": "vaz-01",
+      "title": "Konut Sitesi Vaziyet Planı",
+      "category": "vaziyet",
+      "categoryLabel": "Vaziyet Planı",
+      "year": 2022,
+      "location": "Siirt",
+      "area": "12.000 m²",
+      "duration": "3 ay (proje)",
+      "status": "Tamamlandı",
+      "summary": "24 villalık, sosyal alanları ve otoparkıyla dengeli bir konut sitesi yerleşim planı.",
+      "image": "assets/images/projects/vaz-01.jpg",
+      "tags": ["Konut", "Vaziyet", "Peyzaj entegrasyonu"],
+      "content": {
+        "intro": "12.000 m²'lik bir arsa üzerinde 24 villalık butik konut sitesi planlandı. Amaç, mahalle ölçeğinde komşuluk ilişkilerini güçlendiren, araç trafiğini yaya güvenliğinden ayıran bir yerleşim kurmaktı.",
+        "climate": "Siirt'in güneşlenme açısı 35° (yaz güneşi yüksek). Villa yerleşimleri kuzey-güney aksına göre konumlandırıldı; güney cepheler geniş, kuzey cepheler kompakt tutuldu. Yaz gölgelemesi için site ağaçları (çınar, kızılağaç) yerleşim planına entegre edildi.",
+        "soil": "Zemin etüdüne göre parselin güney yarısı kaya, kuzey yarısı alüvyon. Kaya zeminde kazık temel gereksinimi azaldı; alüvyon zeminde fore kazık uygulandı. Yağmur suyu yönetimi için topoğrafik eğim kullanıldı.",
+        "neighborhood": "Parsel, yeni gelişen bir bölgede. Çevre parsellerde benzer yoğunlukta yapılaşma bekleniyor; site yerleşimi, gelecekteki komşu yapılarla uyumlu tampon bölgeler bırakacak şekilde tasarlandı.",
+        "regulations": "1/1000 ölçekli imar planına göre TAKS 0.25, KAKS 0.50, h max 6.50 m. 24 villa için gerekli yeşil alan, otopark (1 araç/daire) ve sosyal donatı (küçük oyun alanı) hesaplandı.",
+        "equations": "Yol alanı: ~%18, yeşil alan: ~%35, yapı alanı: ~%22, otopark: ~%25. 24 villa × 220 m² = 5.280 m² toplam yapı alanı, parsel alanına göre TAKS 0.22 (yönetmelikten düşük, yeşil alan lehine).",
+        "process": [
+          "Şantiye analizi ve SWOT (1 hafta)",
+          "Topografik ölçüm (1 hafta)",
+          "Konsept yerleşim (2 hafta)",
+          "Vaziyet planı detaylandırma (3 hafta)",
+          "Peyzaj ve altyapı entegrasyonu (2 hafta)",
+          "Belediye onayı ve ruhsat (1 ay)"
+        ],
+        "outcome": "Site 2023'te yapımına başlandı, 2025'te tamamlandı. Site sakini memnuniyet anketinde 'komşuluk ilişkisi' %88 olumlu oy aldı."
+      }
+    },
+    {
+      "id": "vaz-02",
+      "title": "Küçük Sanayi Sitesi Vaziyet Planı",
+      "category": "vaziyet",
+      "categoryLabel": "Vaziyet Planı",
+      "year": 2023,
+      "location": "Kurtalan",
+      "area": "8.500 m²",
+      "duration": "2 ay (proje)",
+      "status": "Tamamlandı",
+      "summary": "24 dükkân, ortak otopark ve yükleme alanıyla düzenli bir küçük sanayi sitesi yerleşimi.",
+      "image": "assets/images/projects/vaz-02.jpg",
+      "tags": ["Sanayi", "Vaziyet", "Lojistik"],
+      "content": {
+        "intro": "Kurtalan'da dağınık haldeki oto tamir ve marangoz atölyeleri, tek bir sanayi sitesinde toplanmak istendi. Vaziyet planı, araç sirkülasyonu, yükleme-boşaltma ve yangın güvenliği öncelikli olarak hazırlandı.",
+        "climate": "Sanayi sitesi açık alanları yoğun kullanılıyor. Sıcak yaz aylarında çalışan konforu için gölgeleme stratejisi önemli: çelik konstrüksiyon üzerine sarmaşık kaplı pergolalar ve su perdeleri önerildi.",
+        "soil": "Zemin, geçirgenliği yüksek sıkı çakıl. Yağmur suyu yönetimi için doğal infiltrasyon çözümleri (geçirimli beton, yağmur bahçeleri) tasarlandı.",
+        "neighborhood": "Sanayi sitesi yerleşim dışı bir bölgede; çevresinde tarım alanları var. Tampon bölge olarak çam ağaçları dikimi planlandı.",
+        "regulations": "Sanayi bölgesi imar planı: minimum parsel 250 m², geri çekme 5 m, h max 8 m. Yangın yönetmeliği: 8 m'lik araç yolu, 100 m'de bir yangın hidrantı.",
+        "equations": "Toplam inşaat alanı: 24 × 80 m² = 1.920 m². Otopark ihtiyacı: 24 × 1.5 araç = 36 araç, ~12 m²/araç → 432 m². Yeşil alan %20 → 1.700 m².",
+        "process": [
+          "Mevcut durum analizi (1 hafta)",
+          "Lojistik akış şeması (1 hafta)",
+          "Konsept yerleşim (2 hafta)",
+          "Yangın ve altyapı planı (2 hafta)",
+          "Belediye onayı (3 hafta)"
+        ],
+        "outcome": "Proje onaylandı, yapım aşamasında. Esnaf, tek elden düzenli bir yerleşime kavuşacak; müşteri trafiği ve yangın güvenliği iyileşecek."
+      }
+    },
+    {
+      "id": "vaz-03",
+      "title": "İlkokul Bahçesi ve Toplanma Alanı",
+      "category": "vaziyet",
+      "categoryLabel": "Vaziyet Planı",
+      "year": 2024,
+      "location": "Pervari",
+      "area": "3.200 m²",
+      "duration": "2 ay (proje)",
+      "status": "Tamamlandı",
+      "summary": "8 derslikli köy okulunun güvenli oyun alanı, toplanma alanı ve araç yolu düzenlemesi.",
+      "image": "assets/images/projects/vaz-03.jpg",
+      "tags": ["Eğitim", "Peyzaj", "Güvenlik"],
+      "content": {
+        "intro": "Pervari'nin dağ köyünde 8 derslikli ilkokulun bahçesi hem oyun alanı hem deprem toplanma alanı olarak kullanılıyordu. Araçlar bahçeye giriyor, çocuklar için güvenlik riski oluşuyordu.",
+        "climate": "Rakım 1400 m, kış ayları sert ve uzun. Bahçe zemininin kışın çamur olmaması için geçirimli kauçuk zemin ve yağmur suyu yönetimi kritikti.",
+        "soil": "Sıkı killi toprak. Çocuk oyun alanı için doğal çim ve sentetik kauçuk karışımı kullanıldı. Yüzey drenajı için %2 eğim verildi.",
+        "neighborhood": "Köy merkezinde, okul çevresinde konutlar ve küçük cami var. Bahçe, mahallenin akşam toplanma alanı olarak da kullanılıyor; bu yüzden oturma birimleri ve aydınlatma düşünüldü.",
+        "regulations": "Eğitim yapıları yönetmeliği: oyun alanı min 4 m²/öğrenci, güvenli çevreleme, acil çıkış. Deprem yönetmeliği: toplanma alanı min 1 m²/kişi.",
+        "equations": "Bahçe alanı 3.200 m². Oyun alanı 1.200 m², toplanma alanı 800 m², otopark 200 m², peyzaj 1.000 m². 120 öğrenci × 4 m² = 480 m² (güvenli).",
+        "process": [
+          "Mevcut durum tespiti (3 gün)",
+          "Kullanıcı görüşmeleri (öğretmenler, veliler) (1 hafta)",
+          "Konsept (1 hafta)",
+          "Uygulama projesi (2 hafta)",
+          "İhale ve yapım (1 ay)"
+        ],
+        "outcome": "Okul bahçesi, çocuklar ve mahalleli için güvenli, çok amaçlı bir alana dönüştü. Deprem tatbikatı başarıyla yapıldı."
+      }
+    },
+    {
+      "id": "kat-01",
+      "title": "Aile Konutu Kat Planları",
+      "category": "kat-plani",
+      "categoryLabel": "Kat Planları",
+      "year": 2024,
+      "location": "Siirt",
+      "area": "Brüt 280 m²",
+      "duration": "2 ay (proje)",
+      "status": "Tamamlandı",
+      "summary": "5 kişilik aile için 3 katlı müstakil konut, akıllı sirkülasyon ve geniş ortak alanlar.",
+      "image": "assets/images/projects/kat-01.jpg",
+      "tags": ["Konut", "3 kat", "Akıllı plan"],
+      "content": {
+        "intro": "Sahibi bir doktor, eşi öğretmen, üç çocuk. 3 katlı konut istiyorlardı; ancak her katın işlevi netti: zemin kat misafir + yaşlı büyükanne, orta kat günlük yaşam, çatı katı çocuklar + ebeveyn yatak odası.",
+        "climate": "Siirt'te yaz sıcaklıkları 40°C'yi aşıyor. Kat planlarında çapraz havalandırma esas alındı: her katta en az iki karşılıklı pencere. Çatı katında çatı penceresi (Velux) ile sıcak hava tahliyesi sağlandı.",
+        "soil": "Temel radye; orta kat ve çatı katı betonarme. Zemin katta yerden ısıtma için şap altı strafor ısı yalıtımı 8 cm uygulandı.",
+        "neighborhood": "Yeni yapılaşan bir mahallede, komşu parsellerde benzer yapı yoğunluğu bekleniyor. Yan bahçe mesafesi 3 m, ön-arka 5 m.",
+        "regulations": "İmar: 3 kat, h max 9.50 m, TAKS 0.30. Yangın: her kata 1 yangın dolabı, 1.20 m merdiven genişliği, 1 saat dayanımlı merdiven kovası.",
+        "equations": "Net alan / brüt alan oranı: 0.85 (Türk konut ortalaması 0.78). Akıllı planlama: koridor genişliği 1.20 m (standart 1.10), her oda en az 9 m², salon 35 m².",
+        "process": [
+          "Aile ihtiyaç analizi (2 hafta)",
+          "Eskiz ve konsept (2 hafta)",
+          "Kat planları (3 hafta)",
+          "Kesitler ve cepheler (1 hafta)",
+          "Mimari uygulama projesi (2 hafta)",
+          "Statik + mekanik + elektrik koordinasyonu (1 ay)",
+          "Ruhsat (1 ay)"
+        ],
+        "outcome": "Konut 2025'te tamamlandı. Sahipleri özellikle çatı katındaki ebeveyn süitinin mahremiyetinden ve zemin kattaki büyükanne dairesinin bahçeyle bağlantısından memnun."
+      }
+    },
+    {
+      "id": "kat-02",
+      "title": "Apartman Dairesi Kat Planı",
+      "category": "kat-plani",
+      "categoryLabel": "Kat Planları",
+      "year": 2023,
+      "location": "Batman",
+      "area": "Brüt 145 m²",
+      "duration": "1.5 ay (proje)",
+      "status": "Tamamlandı",
+      "summary": "Batman'da 4 katlı bir apartmanın 3+1 dairesinin komple yeniden planlanması.",
+      "image": "assets/images/projects/kat-02.jpg",
+      "tags": ["Apartman", "Yeniden planlama", "3+1"],
+      "content": {
+        "intro": "Apartman 2008 yapımıydı, daire 3+1 olarak satılmıştı ancak odalar dar ve koridor uzundu. Yeni sahipleri genç bir çift, evden çalışıyorlar; ev ofis ve yaşam alanı olarak çok amaçlı kullanılacak.",
+        "climate": "Batman yazın 45°C'ye çıkan sıcaklıklarıyla Türkiye'nin en sıcak illerinden. Salon ve yatak odalarında dış cephe yalıtımı ve gölgeleme elemanları zorunluydu. Kat planında, balkon kapatılarak yarı açık yaşam alanı oluşturuldu.",
+        "soil": "Mevcut temele dokunulmadı. Tüm müdahale taşıyıcı olmayan duvarların kaldırılması ve yeni bölücü duvarlarla gerçekleştirildi.",
+        "neighborhood": "Batman merkez, yoğun yapılaşma. Apartmanın güney cephesi ana caddeye bakıyor, gürültü problemi vardı. Üçlü cam (triple) ve ses yalıtımlı doğramalarla çözüldü.",
+        "regulations": "Apartman yönetim planına uyum (ortak alanlara dokunulmadı), belediye tadilat ruhsatı alındı.",
+        "equations": "Net/brüt oranı: 0.82. Salon + mutfak birleşik 48 m², ev ofis 14 m² (aydınlatma ve havalandırmalı), ebeveyn yatak 16 m².",
+        "process": [
+          "Mevcut plan analizi (1 hafta)",
+          "Kullanıcı görüşmeleri (1 hafta)",
+          "Yeni plan alternatifleri (2 hafta)",
+          "Uygulama projesi (2 hafta)",
+          "Ruhsat (3 hafta)"
+        ],
+        "outcome": "Daire sahipleri, evden çalışma konforunun yanı sıra sosyal alanların genişliğinden memnun. Şehir merkezine rağmen iç mekan sessiz ve serin."
+      }
+    },
+    {
+      "id": "kat-03",
+      "title": "Çiftlik Evi Yerleşim Planı",
+      "category": "kat-plani",
+      "categoryLabel": "Kat Planları",
+      "year": 2024,
+      "location": "Şirvan",
+      "area": "Brüt 180 m² + 60 m² sundurma",
+      "duration": "2 ay (proje)",
+      "status": "Tamamlandı",
+      "summary": "Hayvancılıkla uğraşan aile için, ev işi ile ahır işini ayıran, mevsimlik kullanıma uygun çiftlik evi planı.",
+      "image": "assets/images/projects/kat-03.jpg",
+      "tags": ["Çiftlik", "Kırsal", "Sundurma"],
+      "content": {
+        "intro": "Şirvan'ın yüksek rakımlı bir köyünde, hayvancılık yapan 4 kişilik aile için tek katlı bir konut tasarlandı. Yazın sürü yaylaya çıktığında ev 2-3 ay boş kalıyor; kışın tüm aile evde.",
+        "climate": "Rakım 1500 m, kış ayları sert ve kar yağışlı. Giriş holü, ayakkabı-bot ve dış kıyafet için geniş tutuldu. Sundurma, kış günlerinde açık havada oturma ve hayvan bakım alanı olarak kullanılıyor.",
+        "soil": "Toprak zemin, kaymağanlı yapı (yığma taş duvarlar + ahşap döşeme). Islak hacimler (banyo, mutfak) betonarme zemin üzerinde çözüldü.",
+        "neighborhood": "Köy merkezine 1.5 km mesafede, müstakil parsel. Komşu yapı yok; rüzgar yönü ve güneş kontrolü kritik.",
+        "regulations": "Kırsal alan, imar dışı. Yapı kayıt belgesi ve köy ihtiyar heyeti onayı yeterli oldu. Tarım Bakanlığı kırsal konut standartlarına uyuldu.",
+        "equations": "Net kullanım alanı 145 m², sundurma 60 m². Ev: 3 yatak odası (12 m²), 1 oturma (28 m²), 1 mutfak (18 m²), 1 banyo (6 m²), 1 kiler (8 m²), giriş holü (15 m²).",
+        "process": [
+          "Aile yaşamı analizi (1 hafta)",
+          "Mevsimsel kullanım senaryoları (1 hafta)",
+          "Konsept (2 hafta)",
+          "Uygulama projesi (3 hafta)",
+          "Köy onayı (1 hafta)"
+        ],
+        "outcome": "Aile, yazın yaylaya göçüp döndüğünde evin 'mis gibi' kokmasından ve kışın sundurmanın çok amaçlı kullanımından memnun."
+      }
+    },
+    {
+      "id": "peyzaj-01",
+      "title": "Bahçe & Avlu Peyzajı",
+      "category": "peyzaj",
+      "categoryLabel": "Peyzaj",
+      "year": 2023,
+      "location": "Baykan",
+      "area": "650 m²",
+      "duration": "3 ay",
+      "status": "Tamamlandı",
+      "summary": "Yerli bitki örtüsü, doğal taş döşeme ve su öğeleriyle düşük bakım gerektiren bir avlu peyzajı.",
+      "image": "assets/images/projects/peyzaj-01.jpg",
+      "tags": ["Yerli bitki", "Su öğesi", "Düşük bakım"],
+      "content": {
+        "intro": "Baykan'da bir villanın 650 m² arka bahçesi, ailenin oturma ve çocuk oyun alanı olarak yeniden düzenlendi. Mevcut durumda çim alan su tüketimi yüksekti ve bakım zordu. Amaç, yerli bitkilerle doğal bir görünüm ve minimum bakım sağlamaktı.",
+        "climate": "Baykan yazları sıcak ve kurak, kışları soğuk. Bitki seçiminde kuraklığa dayanıklı türler (lavanta, biberiye, kekik, zakkum) ve bölgeye özgü ağaçlar (ceviz, badem, iğde) tercih edildi.",
+        "soil": "Geçirgen killi-tınlı toprak. Bitki dikim alanlarına 30 cm derinlikte kompost-karışımı eklendi. Çim alanı sadece çocuk oyun bölgesinde (90 m²) tutuldu, geri kalan alan 'xeriscape' (kurakçıl peyzaj) olarak tasarlandı.",
+        "neighborhood": "Sokak dokusu, alçak duvarlı villalardan oluşuyor. Bahçe, dışarıdan bakıldığında 'gizli' bir mekan hissi yaratıyor; içeriden ise komşu yapılar göze batmıyor.",
+        "regulations": "Bahçe duvarları için belediye görüşü alındı. Sulama için artezyen kuyusu yerine yağmur suyu toplama sistemi (5 tonluk tank) kuruldu.",
+        "equations": "Sulama ihtiyacı: geleneksel çim bahçeye göre yıllık ~1200 ton → 280 ton (kurakçıl peyzajla). Yıllık tasarruf: %77. Bitki çeşitliliği: 18 tür, 7'si yerli.",
+        "process": [
+          "Toprak ve mikro iklim analizi (1 hafta)",
+          "Bitki seçimi ve yerleşim (2 hafta)",
+          "Sert peyzaj (taş, ahşap, su) (4 hafta)",
+          "Dikim (2 hafta)",
+          "Damla sulama sistemi (1 hafta)",
+          "Bakım planı ve teslim (1 hafta)"
+        ],
+        "outcome": "Aile, yaz aylarında bile 1-2 günde bir sulama ile bahçeyi canlı tutabiliyor. Akşam oturma birimleri favori alan oldu."
+      }
+    },
+    {
+      "id": "peyzaj-02",
+      "title": "Cami Avlusu Peyzajı",
+      "category": "peyzaj",
+      "categoryLabel": "Peyzaj",
+      "year": 2024,
+      "location": "Tillo",
+      "area": "1.200 m²",
+      "duration": "2 ay",
+      "status": "Tamamlandı",
+      "summary": "Tillo tarihi camisinin avlusunda gölgeleme, oturma ve yağmur suyu yönetimi peyzajı.",
+      "image": "assets/images/projects/peyzaj-02.jpg",
+      "tags": ["Cami", "Gölgeleme", "Yağmur suyu"],
+      "content": {
+        "intro": "Tillo'daki tarihi caminin avlusu, yazın namaz çıkışlarında ve Cuma günleri yoğun kullanılıyor. Mevcut durumda sert asfalt zemin sıcak tutuyor, gölge alan yoktu. Peyzaj düzenlemesiyle gölge, su ve yeşil doku kazandırıldı.",
+        "climate": "Tillo rakımı 1100 m, yaz günleri 35°C. Avluda gölgeleme için çınar ağaçları dikildi, su öğesi olarak küçük bir çeşme tasarlandı.",
+        "soil": "Mevcut asfalt kaldırıldı, alttaki geçirimsiz toprak 40 cm derinlikte işlendi. Yağmur suyu yönetimi için sığ kanallar ve infiltrasyon çukurları açıldı.",
+        "neighborhood": "Avlu, tarihi sit alanı. Peyzaj düzenlemesi Koruma Kurulu onayıyla yapıldı. Modern malzeme (beton, plastik) minimumda tutuldu; doğal taş ve ahşap önceliklendirildi.",
+        "regulations": "Koruma Kurulu onayı + Vakıflar Bölge Müdürlüğü onayı. Zemin malzemesi olarak yöreye özgü kireçtaşı kullanıldı.",
+        "equations": "Yağmur suyu yönetimi: 1.200 m² × yıllık 600 mm yağış × 0.6 akış katsayısı = 432 m³/yıl. Bu su, infiltrasyon ile yeraltına veriliyor; yıllık %40 daha az kanalizasyon yükü.",
+        "process": [
+          "Koruma Kurulu onayı (1 ay)",
+          "Mevcut zemin sökümü (1 hafta)",
+          "Altyapı ve drenaj (2 hafta)",
+          "Sert peyzaj (4 hafta)",
+          "Dikim ve su öğesi (2 hafta)"
+        ],
+        "outcome": "Avlu, yaz aylarında sıcaklık 8-10°C daha serin. Cemaat namaz sonrası avluda vakit geçirmeyi tercih ediyor."
+      }
+    },
+    {
+      "id": "peyzaj-03",
+      "title": "Okul Bahçesi Peyzajı",
+      "category": "peyzaj",
+      "categoryLabel": "Peyzaj",
+      "year": 2023,
+      "location": "Kurtalan",
+      "area": "2.400 m²",
+      "duration": "3 ay",
+      "status": "Tamamlandı",
+      "summary": "İlkokul bahçesinde güvenli oyun alanı, sebze bahçesi ve gölgeleme peyzajı.",
+      "image": "assets/images/projects/peyzaj-03.jpg",
+      "tags": ["Okul", "Eğitim", "Sebze bahçesi"],
+      "content": {
+        "intro": "Kurtalan merkez ilkokulun 2.400 m²'lik bahçesi yeniden düzenlendi. Çocuklar için güvenli, öğretici ve gölgeli alanlar yaratıldı. Mevcut durumda asfalt zemin yazın 50°C'yi buluyordu.",
+        "climate": "Kurtalan yazın çok sıcak. Bahçede 8 büyük çınar + 15 taflan ile gölgeleme sağlandı. Çocuk oyun alanları, sentetik kauçuk zeminle kaplandı.",
+        "soil": "Toprak zemin, geçirgenliği iyi. Çocuk oyun alanı altında 20 cm çakıl drenaj + üzerine kauçuk zemin. Sebze bahçesi için 30 cm kompost karışımı hazırlandı.",
+        "neighborhood": "Okul, mahalle merkezinde. Bahçe aynı zamanda mahalle toplanma alanı olarak da kullanılıyor. Peyzaj, hem çocuklar hem yetişkinler için çok amaçlı tasarlandı.",
+        "regulations": "Eğitim yapıları yönetmeliği: güvenli oyun alanı, engelli erişimi, acil çıkış. Sağlık Bakanlığı oyun alanı güvenliği kılavuzuna uyuldu.",
+        "equations": "Alan dağılımı: Oyun alanı 800 m², sebze bahçesi 200 m², oturma alanı 300 m², peyzaj 1.100 m². Gölgeleme oranı yaz ortasında %65.",
+        "process": [
+          "Öğretmen ve veli görüşmeleri (1 hafta)",
+          "Konsept (1 hafta)",
+          "Altyapı (2 hafta)",
+          "Sert peyzaj (3 hafta)",
+          "Dikim (2 hafta)",
+          "Sebze bahçesi kurulumu ve eğitim (2 hafta)"
+        ],
+        "outcome": "Okul, 'yeşil okul' sertifikası aldı. Sebze bahçesinden elde edilen ürünler, okul yemekhanesinde kullanılıyor."
+      }
+    },
+    {
+      "id": "tas-01",
+      "title": "Dağ Evi — Taş & Ahşap",
+      "category": "tas-ahsap",
+      "categoryLabel": "Taş & Ahşap",
+      "year": 2023,
+      "location": "Pervari",
+      "area": "Brüt 165 m²",
+      "duration": "6 ay (yapım)",
+      "status": "Tamamlandı",
+      "summary": "Pervari yaylasında yerel taş ve kestane ahşabıyla, pasif soğutma stratejili rustik konut.",
+      "image": "assets/images/projects/tas-01.jpg",
+      "tags": ["Yayla evi", "Taş", "Kestane ahşap"],
+      "content": {
+        "intro": "Pervari yaylasında 1.700 m rakımda bir dağ evi tasarlandı. Müşteri, hafta sonu ve yaz aylarında kullanacağı, geleneksel yayla mimarisiyle modern konforu buluşturan bir ev istiyordu.",
+        "climate": "Rakım 1.700 m. Kışın -25°C, yazın 25°C. Sıcaklık farkı 50°C'yi aşıyor. Tasarımda pasif güneş kazancı (güney cam yüzeyleri), termal kütle (kalın taş duvarlar) ve rüzgar bariyerleri (kuzey-doğu rüzgarlarına karşı) bir arada kullanıldı.",
+        "soil": "Kayalık zemin, temel için sığ kazı yeterli. Doğal taş (kireçtaşı) temel duvarlarında, cephede ise yerel kayadan kırılmış moloz taş kullanıldı. Ahşap olarak kestane ve meşe tercih edildi (dayanıklı, yerel).",
+        "neighborhood": "Yaylada seyrek yapılaşma, komşu yapı yok. Ev, topoğrafyaya uyumlu olarak yarı gömülü tasarlandı; kuzey cephe toprağa yaslandı, güney cephe açıldı.",
+        "regulations": "Yaylada yapılaşma kısıtlı; Köy ihtiyar heyeti ve İl Özel İdaresi onayı alındı. Yapı kayıt belgesi mevcut.",
+        "equations": "Termal kütle: 0.6 m × 18 kN/m³ × 220 m² = 2.4 MJ/K. Bu kütle, ısıtma/soğutma yükünü %70 azaltıyor. Yıllık enerji tüketimi: ~38 kWh/m² (Passivhouse sınırı: 60 kWh/m²).",
+        "process": [
+          "Yerinde inceleme ve topoğrafik ölçüm (1 hafta)",
+          "Konsept (2 hafta)",
+          "Taş ocağı seçimi ve kaba yığma (6 hafta)",
+          "Ahşap taşıyıcı ve döşeme (4 hafta)",
+          "Çatı ve yalıtım (3 hafta)",
+          "İç mekan ve şömine (4 hafta)",
+          "Peyzaj ve çevre düzenleme (2 hafta)"
+        ],
+        "outcome": "Ev, kış aylarında sadece şömine ile yaşanabilir sıcaklıkta. Aile, yaz aylarında klima ihtiyacı duymadan konforlu vakit geçiriyor."
+      }
+    },
+    {
+      "id": "tas-02",
+      "title": "Konuk Evi — Geleneksel Rustik",
+      "category": "tas-ahsap",
+      "categoryLabel": "Taş & Ahşap",
+      "year": 2024,
+      "location": "Şirvan",
+      "area": "Brüt 95 m²",
+      "duration": "4 ay (yapım)",
+      "status": "Tamamlandı",
+      "summary": "Siirt geleneksel mimarisinden ilhamla, modern banyo-mutfak konforu eklenmiş 1+1 konuk evi.",
+      "image": "assets/images/projects/tas-02.jpg",
+      "tags": ["Konuk evi", "Rustik", "Geleneksel"],
+      "content": {
+        "intro": "Şirvan'da bir köy evinin avlusuna ek olarak yapılan 1+1 konuk evi. Geleneksel Siirt taş evi tipolojisinden (ocak, sofa, çıkma) ilham alındı, ancak modern tesisat (elektrik, su, kanalizasyon) entegre edildi.",
+        "climate": "Yaz-kış sıcaklık farkı 40°C. Kalın taş duvarlar (50 cm) ve küçük pencereler, geleneksel olarak doğal ısı regülasyonu sağlıyor. Modern yalıtım ile desteklendi.",
+        "soil": "Temel yığma taş, mevcut köy evinin temelinden 1.5 m ayrı. Yapı, ana yapıdan bağımsız statik davranış gösteriyor.",
+        "neighborhood": "Köy dokusu, sıkışık evler, dar sokaklar. Konuk evi, avlunun güney köşesine konumlandırıldı; ana evin gölgesinde kalmayacak şekilde.",
+        "regulations": "Köy ihtiyar heyeti onayı + yapı kayıt belgesi. Geleneksel doku korundu; çatı malzemesi olarak yerel kiremit kullanıldı.",
+        "equations": "Net alan 78 m². Taş duvar termal kütlesi: 0.5 m × 18 kN/m³ × 95 m² = 855 kJ/K. Yazın iç sıcaklık, dışarıya göre 6-8°C serin.",
+        "process": [
+          "Mevcut avlu analizi (3 gün)",
+          "Konsept (1 hafta)",
+          "Taş duvar yığma (4 hafta)",
+          "Ahşap tavan ve çatı (3 hafta)",
+          "Modern tesisat (2 hafta)",
+          "İç mekan (3 hafta)"
+        ],
+        "outcome": "Aile yaz aylarında misafirlerini konuk evinde ağırlıyor. Misafirler, geleneksel atmosfer ile modern konforun bileşiminden memnun."
+      }
+    },
+    {
+      "id": "tas-03",
+      "title": "Bağ Evi — Şarapçılık Tesisi",
+      "category": "tas-ahsap",
+      "categoryLabel": "Taş & Ahşap",
+      "year": 2024,
+      "location": "Batman",
+      "area": "Brüt 220 m² (konut + üretim)",
+      "duration": "8 ay (yapım)",
+      "status": "Tamamlandı",
+      "summary": "Üzüm bağı ortasında taş duvarlı konut + ahşap kazıklar üzerinde yükseltilmiş şarap üretim tesisi.",
+      "image": "assets/images/projects/tas-03.jpg",
+      "tags": ["Bağ evi", "Şarapçılık", "Taş duvar"],
+      "content": {
+        "intro": "Batman'ın güneyinde küçük bir üzüm bağı sahibi, üretim ve konaklama için iki yapı istedi. Konut taş duvarlı rustik, üretim tesisi ise ahşap kazıklar üzerinde yükseltilmiş, havalandırmalı bir yapı.",
+        "climate": "Batman yazın 45°C, kışın -5°C. Üretim tesisi için sıcaklık kontrolü kritik. Yapı, toprağa gömülerek pasif ısı regülasyonu sağlandı; çatıda 50 cm toprak örtü.",
+        "soil": "Bağ toprağı, killi-tınlı. Temel için yarma ve kazı yapıldı. Kazı toprağı, çatı yalıtımı ve peyzaj dolgusu olarak kullanıldı.",
+        "neighborhood": "Bağ ortasında, en yakın komşu 1.5 km. Yapılar arası mesafe 25 m, gölgeleme ve yangın güvenliği için ideal.",
+        "regulations": "Tarım Bakanlığı bağ evi yönetmeliği + İl Özel İdaresi. Şarap üretim tesisi için Gıda Tarım ve Hayvancılık Bakanlığı onayı.",
+        "equations": "Konut 110 m², üretim tesisi 110 m². Üretim tesisinde sıcaklık: 14-18°C yıl boyunca (toprak örtü + pasif havalandırma). Yıllık enerji tüketimi: 28 kWh/m².",
+        "process": [
+          "Bağ analizi ve topoğrafya (1 hafta)",
+          "Konsept (2 hafta)",
+          "Konut taş duvarları (6 hafta)",
+          "Üretim tesisi kazı ve temel (4 hafta)",
+          "Ahşap kazıklar ve platform (5 hafta)",
+          "Üretim ekipmanı kurulumu (4 hafta)",
+          "Konut iç mekanı (4 hafta)"
+        ],
+        "outcome": "Üretim, ilk yıl 8.000 şişe kapasiteyle başladı. Konut, bağ sahibinin yıl boyu konaklama ihtiyacını karşılıyor."
+      }
+    }
+  ]
+}

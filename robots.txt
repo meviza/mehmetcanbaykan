@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mehmetcanbaykan.github.io/sitemap.xml

@@ -1,0 +1,28 @@
+/* =========================================================
+   Layout — container, grid, yapısal yardımcılar
+   ========================================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr; gap: 48px; }
+  .container { padding: 0 20px; }
+}
+
+/* Spacing utilities */
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
