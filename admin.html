@@ -19,6 +19,7 @@
 </head>
 <body class="admin-body">
 
+  <!-- LOGIN -->
   <div class="login-screen" id="loginScreen">
     <div class="login-card">
       <div class="login-brand">
@@ -44,6 +45,7 @@
     </div>
   </div>
 
+  <!-- ADMIN SHELL -->
   <div class="admin-shell" id="adminShell" hidden>
     <aside class="sidebar">
       <div class="sidebar-brand">
@@ -53,7 +55,6 @@
           <small>Mimar · Admin</small>
         </div>
       </div>
-
       <nav class="sidebar-nav" aria-label="Yönetim menüsü">
         <a href="#dashboard" class="nav-item is-active" data-view="dashboard">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
@@ -81,7 +82,6 @@
           Siteyi Aç
         </a>
       </nav>
-
       <div class="sidebar-foot">
         <div class="user-info">
           <div class="user-avatar" id="userAvatar">A</div>
@@ -107,55 +107,22 @@
 
       <!-- DASHBOARD -->
       <section class="view" id="view-dashboard">
-        <div class="stats-row">
-          <div class="stat-tile"><span>Toplam Proje</span><strong id="statProjects">—</strong></div>
-          <div class="stat-tile"><span>Yayında</span><strong id="statPublished">—</strong></div>
-          <div class="stat-tile"><span>Yeni Mesaj</span><strong id="statMessages">—</strong></div>
-          <div class="stat-tile"><span>Açık Görev</span><strong id="statReports">—</strong></div>
-        </div>
-
+        <div class="stats-row"></div>
         <div class="panel">
-          <header>
-            <h3>Son Mesajlar</h3>
-            <a href="#messages" class="link">Tümünü Gör →</a>
-          </header>
-          <div class="table-wrap">
-            <table id="recentMessages">
-              <thead><tr><th>Tarih</th><th>Ad</th><th>Telefon</th><th>Konu</th><th>Durum</th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </div>
+          <header><h3>Son Mesajlar</h3><a href="#messages" class="link">Tümünü Gör →</a></header>
+          <div class="table-wrap"><table id="recentMessages"><thead><tr><th>Tarih</th><th>Ad</th><th>Telefon</th><th>Konu</th><th>Durum</th></tr></thead><tbody></tbody></table></div>
         </div>
-
         <div class="panel">
-          <header>
-            <h3>Son Raporlar</h3>
-            <a href="#reports" class="link">Tümünü Gör →</a>
-          </header>
-          <div class="table-wrap">
-            <table id="recentReports">
-              <thead><tr><th>Tarih</th><th>Başlık</th><th>Tür</th><th>Durum</th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </div>
+          <header><h3>Son Raporlar</h3><a href="#reports" class="link">Tümünü Gör →</a></header>
+          <div class="table-wrap"><table id="recentReports"><thead><tr><th>Tarih</th><th>Başlık</th><th>Tür</th><th>Durum</th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
       <!-- CUSTOMERS -->
       <section class="view" id="view-customers" hidden>
         <div class="panel">
-          <header>
-            <h3>Müşteriler</h3>
-            <div class="panel-actions">
-              <button class="btn btn-primary btn-sm" id="newCustomerBtn">+ Yeni Müşteri</button>
-            </div>
-          </header>
-          <div class="table-wrap">
-            <table id="customersTable">
-              <thead><tr><th>Ad</th><th>Tür</th><th>Telefon</th><th>E-posta</th><th>Şehir</th><th></th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </div>
+          <header><h3>Müşteriler</h3></header>
+          <div class="table-wrap"><table id="customersTable"><thead><tr><th>Ad</th><th>Tür</th><th>Telefon</th><th>E-posta</th><th>Şehir</th><th></th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
@@ -169,12 +136,7 @@
               <button class="btn btn-primary btn-sm" id="newProjectBtn">+ Yeni Proje</button>
             </div>
           </header>
-          <div class="table-wrap">
-            <table id="projectsTable">
-              <thead><tr><th>ID</th><th>Başlık</th><th>Kategori</th><th>Yıl</th><th>Konum</th><th>Müşteri</th><th>Durum</th><th></th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </div>
+          <div class="table-wrap"><table id="projectsTable"><thead><tr><th>ID</th><th>Başlık</th><th>Kategori</th><th>Yıl</th><th>Konum</th><th>Müşteri</th><th>Durum</th><th></th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
@@ -184,21 +146,10 @@
           <header>
             <h3>Müşteri Mesajları</h3>
             <div class="panel-actions">
-              <select id="messageFilter" aria-label="Mesaj durum filtresi">
-                <option value="all">Tümü</option>
-                <option value="new">Yeni</option>
-                <option value="read">Okunmuş</option>
-                <option value="replied">Yanıtlanmış</option>
-                <option value="archived">Arşivlenmiş</option>
-              </select>
+              <select id="messageFilter" aria-label="Mesaj durum filtresi"></select>
             </div>
           </header>
-          <div class="table-wrap">
-            <table id="messagesTable">
-              <thead><tr><th>Tarih</th><th>Ad</th><th>Telefon</th><th>Konu</th><th>Mesaj</th><th>Durum</th><th></th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </div>
+          <div class="table-wrap"><table id="messagesTable"><thead><tr><th>Tarih</th><th>Ad</th><th>Telefon</th><th>Konu</th><th>Mesaj</th><th>Durum</th><th></th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
 
@@ -211,12 +162,7 @@
               <button class="btn btn-primary btn-sm" id="newReportBtn">+ Yeni Rapor</button>
             </div>
           </header>
-          <div class="table-wrap">
-            <table id="reportsTable">
-              <thead><tr><th>Tarih</th><th>Başlık</th><th>Tür</th><th>Müşteri</th><th>Proje</th><th>Durum</th><th></th></tr></thead>
-              <tbody></tbody>
-            </table>
-          </div>
+          <div class="table-wrap"><table id="reportsTable"><thead><tr><th>Tarih</th><th>Başlık</th><th>Tür</th><th>Müşteri</th><th>Proje</th><th>Durum</th><th></th></tr></thead><tbody></tbody></table></div>
         </div>
       </section>
     </main>
@@ -225,6 +171,6 @@
   <div class="toast-stack" id="toastStack"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script type="module" src="assets/js/admin.js"></script>
+  <script type="module" src="assets/js/features/admin/index.js"></script>
 </body>
 </html>

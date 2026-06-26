@@ -281,6 +281,154 @@ td.actions button {
 .form-grid textarea:focus { outline: none; border-color: var(--accent-2); }
 .form-grid select option { background: #1c1916; }
 
+/* IMAGE / FILE UPLOADER */
+.uploader {
+  border: 2px dashed rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--t), background var(--t);
+  position: relative;
+}
+.uploader:hover, .uploader.is-dragover {
+  border-color: var(--accent-2);
+  background: rgba(176, 138, 74, 0.06);
+}
+.uploader input { display: none; }
+.uploader .uploader-icon {
+  width: 48px; height: 48px;
+  margin: 0 auto 12px;
+  color: rgba(246,243,238,0.4);
+}
+.uploader-text {
+  color: rgba(246,243,238,0.6);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.uploader-hint { color: rgba(246,243,238,0.4); font-size: 11px; }
+.uploader-preview {
+  position: relative;
+  margin-top: 12px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 200px;
+  display: inline-block;
+}
+.uploader-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+.uploader-remove {
+  position: absolute;
+  top: 6px; right: 6px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background var(--t);
+}
+.uploader-remove:hover { background: #f87171; }
+
+.uploader-progress {
+  margin-top: 12px;
+  height: 4px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.uploader-progress-bar {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: var(--accent-2);
+  width: 0%;
+  transition: width 200ms ease;
+}
+.uploader-status {
+  margin-top: 6px;
+  font-size: 11px;
+  color: rgba(246,243,238,0.5);
+  text-align: center;
+}
+
+/* GALLERY (multi-image) */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gallery-item-remove {
+  position: absolute;
+  top: 4px; right: 4px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.gallery-item-remove:hover { background: #f87171; }
+.gallery-item-cover {
+  position: absolute;
+  top: 4px; left: 4px;
+  font-size: 9px;
+  padding: 2px 6px;
+  background: var(--accent-2);
+  color: var(--ink);
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* DOCUMENTS LIST */
+.docs-list {
+  display: flex; flex-direction: column; gap: 6px;
+  margin-top: 12px;
+}
+.doc-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+.doc-item-info { flex: 1; min-width: 0; }
+.doc-item-name {
+  font-weight: 500;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.doc-item-meta { color: rgba(246,243,238,0.4); font-size: 11px; margin-top: 2px; }
+.doc-item-actions { display: flex; gap: 6px; }
+.doc-item-actions button {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  transition: background var(--t);
+}
+.doc-open { background: rgba(31, 58, 95, 0.3); color: #93c5fd; }
+.doc-open:hover { background: rgba(31, 58, 95, 0.5); }
+.doc-delete { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.doc-delete:hover { background: rgba(239, 68, 68, 0.25); }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .admin-shell { grid-template-columns: 1fr; }

@@ -327,6 +327,52 @@ export async function deleteReport(id) {
   return true;
 }
 
+// ----------------- DOCUMENTS -----------------
+const LS_KEYS_DOCS = 'mcb:documents';
+function lsGetDocs() { try { return JSON.parse(localStorage.getItem(LS_KEYS_DOCS) || '[]'); } catch { return []; } }
+function lsSetDocs(v) { localStorage.setItem(LS_KEYS_DOCS, JSON.stringify(v)); }
+
+export async function listDocumentsByProject(projectId) {
+  const c = await sb();
+  if (!c) return lsGetDocs().filter(d => d.project_id === projectId);
+  const { data, error } = await c.from('documents').select('*').eq('project_id', projectId).order('created_at', { ascending: false });
+  if (error) throw error;
+  return data || [];
+}
+
+export async function listAllDocuments() {
+  const c = await sb();
+  if (!c) return lsGetDocs();
+  const { data, error } = await c.from('documents').select('*, project:project_id(title)').order('created_at', { ascending: false });
+  if (error) throw error;
+  return data || [];
+}
+
+export async function createDocument(payload) {
+  const c = await sb();
+  if (!c) {
+    const list = lsGetDocs();
+    const row = { id: genId(), created_at: new Date().toISOString(), ...payload };
+    list.push(row); lsSetDocs(list);
+    return row;
+  }
+  const { data: { user } } = await c.auth.getUser();
+  const { data, error } = await c.from('documents').insert({ ...payload, uploaded_by: user?.id || null }).select().single();
+  if (error) throw error;
+  return data;
+}
+
+export async function deleteDocument(id) {
+  const c = await sb();
+  if (!c) {
+    lsSetDocs(lsGetDocs().filter(x => x.id !== id));
+    return true;
+  }
+  const { error } = await c.from('documents').delete().eq('id', id);
+  if (error) throw error;
+  return true;
+}
+
 // ----------------- DASHBOARD -----------------
 export async function getDashboardStats() {
   const [customers, projects, messages, reports] = await Promise.all([
