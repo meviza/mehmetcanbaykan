@@ -58,6 +58,22 @@
 }
 .login-form input:focus { outline: none; border-color: var(--accent-2); }
 .login-status { color: var(--accent-3); font-size: 13px; text-align: center; min-height: 18px; }
+.login-forgot {
+  text-align: center;
+  margin: -8px 0 0;
+  font-size: 13px;
+}
+.login-forgot a {
+  color: rgba(246,243,238,0.6);
+  text-decoration: none;
+  transition: color var(--t);
+  border-bottom: 1px dotted rgba(246,243,238,0.3);
+  padding-bottom: 1px;
+}
+.login-forgot a:hover {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
+}
 .login-footer { text-align: center; margin-top: 24px; }
 .login-footer a { color: rgba(246,243,238,0.6); font-size: 13px; transition: color var(--t); }
 .login-footer a:hover { color: var(--accent-2); }

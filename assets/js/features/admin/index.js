@@ -5,17 +5,14 @@
 
 import { getClient } from '../../lib/db.js';
 import { signIn, signOut, getSession } from '../../lib/auth.js';
-import { SUPABASE_CONFIG } from '../../config.js';
-import { $, $$, el } from '../../lib/components/atoms.js';
+import { $ } from '../../lib/components/atoms.js';
 import { toast } from '../../lib/components/modal.js';
 import { switchView, bindNav, currentView } from './router.js';
-import * as customers from './customers.js';
-import * as projects from './projects.js';
 
 export async function initAdmin() {
-  // Supabase client init
-  if (window.SupabaseService?.init) window.SupabaseService.init();
-  isOnline = !!(window.SupabaseService?.isReady?.() || await getClient().then(c => !!c));
+  // Supabase client init (config.js tarafından yönetilir)
+  const client = await getClient();
+  isOnline = !!client;
 
   const badge = document.getElementById('supabaseState');
   if (badge) {
@@ -26,6 +23,7 @@ export async function initAdmin() {
   bindLogin();
   bindNav();
   bindLogout();
+  bindForgotPassword();
 
   // Oturum kontrolü
   try {
@@ -61,15 +59,55 @@ function bindLogin() {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const data = new FormData(form);
+    const email = (data.get('email') || '').toString().trim();
+    const password = (data.get('password') || '').toString();
     const status = $('#loginStatus');
     if (status) status.textContent = 'Giriş yapılıyor…';
     try {
-      const user = await signIn(data.get('email'), data.get('password'));
+      const user = await signIn(email, password);
       onLoginSuccess(user);
     } catch (err) {
       if (status) status.textContent = err.message || 'Giriş başarısız';
+      toast('Giriş başarısız: ' + (err.message || err), 'error');
     }
   });
+}
+
+function bindForgotPassword() {
+  const link = $('#forgotLink');
+  if (!link) return;
+  link.addEventListener('click', async e => {
+    e.preventDefault();
+    const emailInput = document.querySelector('#loginForm [name="email"]');
+    const email = emailInput?.value?.trim();
+    if (!email) {
+      toast('Lütfen e-posta adresinizi girin.', 'error');
+      emailInput?.focus();
+      return;
+    }
+    await forgotPassword(email);
+  });
+}
+
+async function forgotPassword(email) {
+  if (!isOnline) {
+    toast('Çevrimdışı moddasınız — şifre yenileme için Supabase gerekir.', 'error');
+    return;
+  }
+  const status = $('#loginStatus');
+  if (status) status.textContent = 'Şifre yenileme e-postası gönderiliyor…';
+  try {
+    const client = await getClient();
+    const { error } = await client.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + '/admin.html'
+    });
+    if (error) throw error;
+    if (status) status.textContent = '✓ Şifre yenileme linki gönderildi. E-postanızı kontrol edin.';
+    toast('Şifre yenileme linki gönderildi.', 'success');
+  } catch (err) {
+    if (status) status.textContent = 'Hata: ' + (err.message || err);
+    toast('Hata: ' + (err.message || err), 'error');
+  }
 }
 
 function bindLogout() {
@@ -79,10 +117,7 @@ function bindLogout() {
   });
 }
 
-// Cross-module state — dashboard için gerekli
 export function getAllState() {
-  return {
-    customers: customers.state,
-    projects: projects.state
-  };
+  // Cross-module state export (dashboard için)
+  return {};
 }
