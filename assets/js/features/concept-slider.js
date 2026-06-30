@@ -5,19 +5,18 @@
  */
 
 const SLIDES = [
-  { src: 'assets/images/concepts/site-2.png',           title: 'Site Tasarımı',         category: 'site',         hint: 'Parsel düzenlemesi, ana giriş aksı, otopark ve yeşil tampon.' },
-  { src: 'assets/images/concepts/kat-plani-02.png',     title: 'Kat Planı 02',          category: 'plan',         hint: 'Sirkülasyon, ergonomik m² kullanımı, ıslak hacim optimizasyonu.' },
-  { src: 'assets/images/concepts/kultur-sanat-evi.png', title: 'Kültür & Sanat Evi',    category: 'culture',      hint: 'Çok amaçlı salon, atölyeler, galeri koridorları; esnek akustik.' },
-  { src: 'assets/images/concepts/site-tasarimi.png',    title: 'Site Tasarımı',         category: 'site',         hint: 'Yaya aksı, araç yolu ayrımı, peyzaj entegrasyonu.' },
-  { src: 'assets/images/concepts/ic-tasarim-03.png',    title: 'İç Tasarım 03',         category: 'interior',     hint: 'Doğal ışık, gömme aydınlatma, doku kontrastı.' },
-  { src: 'assets/images/concepts/kat-plani-01.png',     title: 'Kat Planı 01',          category: 'plan',         hint: 'Açık plan, merkezi ada, lineer mutfak-banyo şeridi.' },
-  { src: 'assets/images/concepts/ic-tasarim-02.png',    title: 'İç Tasarım 02',         category: 'interior',     hint: 'Mobilyada özel üretim, sıcak ton paleti, hacim kademelemesi.' },
-  { src: 'assets/images/concepts/ic-tasarim-01.png',    title: 'İç Tasarım 01',         category: 'interior',     hint: 'Galeri boşluğu, doğal malzeme, sessiz lüks detaylar.' },
-  { src: 'assets/images/concepts/rezidans.png',         title: 'Rezidans',              category: 'rezidans',     hint: 'Yüksek tavan, manzara odaklı, özel peyzaj entegrasyonu.' },
-  { src: 'assets/images/concepts/restorasyon-03.png',   title: 'Restorasyon 03',        category: 'restoration',  hint: 'Taş duvar stabilizasyonu, geleneksel pencere detayları.' },
-  { src: 'assets/images/concepts/restorasyon-02.png',   title: 'Restorasyon 02',        category: 'restoration',  hint: 'Ahşap taşıyıcı restorasyonu, cephe sağlamlaştırma.' },
-  { src: 'assets/images/concepts/restorasyon-04.png',   title: 'Restorasyon 04',        category: 'restoration',  hint: 'İç mekân koruma, süsleme detayları, modern müdahale dengesi.' },
-  { src: 'assets/images/concepts/restorasyon-01.png',   title: 'Restorasyon 01',        category: 'restoration',  hint: 'Tarihi doku + çağdaş konfor, ters tavan stratejisi.' },
+  { src: 'assets/images/concepts/site-02.webp',          title: 'Site Tasarımı 02',    category: 'site',        hint: 'Parsel düzenlemesi, ana giriş aksı, otopark ve yeşil tampon.' },
+  { src: 'assets/images/concepts/kat-plani-02.webp',     title: 'Kat Planı 02',        category: 'plan',        hint: 'Sirkülasyon, ergonomik m² kullanımı, ıslak hacim optimizasyonu.' },
+  { src: 'assets/images/concepts/kultur-sanat-evi.webp', title: 'Kültür & Sanat Evi',  category: 'culture',     hint: 'Çok amaçlı salon, atölyeler, galeri koridorları; esnek akustik.' },
+  { src: 'assets/images/concepts/site-tasarimi.webp',    title: 'Site Tasarımı',       category: 'site',        hint: 'Yaya aksı, araç yolu ayrımı, peyzaj entegrasyonu.' },
+  { src: 'assets/images/concepts/ic-tasarim-03.webp',    title: 'İç Tasarım 03',       category: 'interior',    hint: 'Doğal ışık, gömme aydınlatma, doku kontrastı.' },
+  { src: 'assets/images/concepts/kat-plani-01.webp',     title: 'Kat Planı 01',        category: 'plan',        hint: 'Açık plan, merkezi ada, lineer mutfak-banyo şeridi.' },
+  { src: 'assets/images/concepts/ic-tasarim-02.webp',    title: 'İç Tasarım 02',       category: 'interior',    hint: 'Mobilyada özel üretim, sıcak ton paleti, hacim kademelemesi.' },
+  { src: 'assets/images/concepts/ic-tasarim-01.webp',    title: 'İç Tasarım 01',       category: 'interior',    hint: 'Galeri boşluğu, doğal malzeme, sessiz lüks detaylar.' },
+  { src: 'assets/images/concepts/rezidans.webp',         title: 'Rezidans',            category: 'rezidans',    hint: 'Yüksek tavan, manzara odaklı, özel peyzaj entegrasyonu.' },
+  { src: 'assets/images/concepts/restorasyon-03.webp',   title: 'Restorasyon 03',      category: 'restoration', hint: 'Taş duvar stabilizasyonu, geleneksel pencere detayları.' },
+  { src: 'assets/images/concepts/restorasyon-02.webp',   title: 'Restorasyon 02',      category: 'restoration', hint: 'Ahşap taşıyıcı restorasyonu, cephe sağlamlaştırma.' },
+  { src: 'assets/images/concepts/restorasyon-04.webp',   title: 'Restorasyon 04',      category: 'restoration', hint: 'İç mekân koruma, süsleme detayları, modern müdahale dengesi.' },
 ];
 
 let state = {
@@ -49,7 +48,9 @@ export function initConcepSlider() {
     <div class="cs-lightbox" id="csLightbox" aria-hidden="true" role="dialog" aria-label="Konsept önizleme">
       <button class="cs-lb-close" aria-label="Kapat">×</button>
       <button class="cs-lb-prev" aria-label="Önceki">‹</button>
-      <img class="cs-lb-img" alt=""/>
+      <picture>
+        <img class="cs-lb-img" alt=""/>
+      </picture>
       <button class="cs-lb-next" aria-label="Sonraki">›</button>
       <p class="cs-lb-caption"></p>
     </div>
@@ -65,12 +66,17 @@ export function initConcepSlider() {
     const el = document.createElement('article');
     el.className = 'cs-slide';
     el.dataset.index = i;
+    // WebP yoksa jpg/png'ye düşsün
+    const fallbackSrc = slide.src.replace(/\.webp$/, '.jpg');
     el.innerHTML = `
       <div class="cs-img-wrap">
         <div class="cs-img-placeholder" data-cat="${slide.category}">
           <span>${slide.title}</span>
         </div>
-        <img class="cs-img" src="${slide.src}" alt="${slide.title}" loading="lazy" decoding="async" draggable="false"/>
+        <picture>
+          <source srcset="${slide.src}" type="image/webp"/>
+          <img class="cs-img" src="${fallbackSrc}" alt="${slide.title}" loading="lazy" decoding="async" draggable="false" width="1200" height="900"/>
+        </picture>
       </div>
       <div class="cs-slide-meta">
         <span class="cs-num">${String(i + 1).padStart(2, '0')}</span>
@@ -88,7 +94,7 @@ export function initConcepSlider() {
     thumb.className = 'cs-thumb';
     thumb.setAttribute('aria-label', `${i + 1}. ${slide.title}`);
     thumb.dataset.index = i;
-    thumb.innerHTML = `<img src="${slide.src}" alt="" loading="lazy"/><span class="cs-thumb-num">${String(i + 1).padStart(2, '0')}</span>`;
+    thumb.innerHTML = `<img src="${slide.src}" alt="" loading="lazy" width="80" height="56"/><span class="cs-thumb-num">${String(i + 1).padStart(2, '0')}</span>`;
     thumb.addEventListener('click', () => goTo(i, true));
     thumbs.appendChild(thumb);
   });
@@ -240,8 +246,13 @@ function updateLightbox() {
   const slide = SLIDES[state.index];
   const img = lb.querySelector('.cs-lb-img');
   const cap = lb.querySelector('.cs-lb-caption');
-  img.src = slide.src;
-  img.alt = slide.title;
+  // WebP ana, jpg fallback. Picture element'i sıfırla
+  const picture = lb.querySelector('picture');
+  if (picture) {
+    picture.innerHTML = `<source srcset="${slide.src}" type="image/webp"/><img class="cs-lb-img" alt="${slide.title}"/>`;
+  } else {
+    img.src = slide.src;
+  }
   cap.textContent = `${slide.title} — ${slide.hint}`;
 }
 

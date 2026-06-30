@@ -3,4 +3,9 @@ Allow: /
 Disallow: /admin.html
 Disallow: /404.html
 
+# Sitemap
+Sitemap: https://mehmetcanbaykan-mimar.vercel.app/sitemap.xml
 Sitemap: https://mehmetcanbaykan.com/sitemap.xml
+
+# Crawl-delay (opsiyonel)
+Crawl-delay: 1
