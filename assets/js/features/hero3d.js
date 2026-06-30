@@ -62,6 +62,10 @@ function setup(container) {
   container.appendChild(renderer.domElement);
   renderer.domElement.classList.add('hero3d-canvas');
 
+  // Canvas yüklendi → skeleton'ı gizle
+  const skel = container.querySelector('.hero-3d-skeleton');
+  if (skel) skel.style.opacity = '0';
+
   scene = new THREE.Scene();
   scene.fog = new THREE.FogExp2(0x0a0a0b, 0.04);
 

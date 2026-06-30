@@ -13,6 +13,33 @@
     linear-gradient(180deg, #0a0a0b 0%, #050506 100%);
 }
 
+.hero-3d-skeleton {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 600ms ease;
+}
+.hero-3d-skeleton svg {
+  width: min(70%, 480px);
+  height: auto;
+  opacity: 0.7;
+  animation: skel-pulse 3s ease-in-out infinite;
+}
+@keyframes skel-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.85; }
+}
+.hero-3d .hero3d-canvas + .hero-3d-skeleton,
+.hero-3d .hero3d-canvas ~ .hero-3d-skeleton {
+  opacity: 0;
+}
+.hero-3d-fallback .hero-3d-skeleton { opacity: 0; }
+.hero-3d-fallback .hero3d-poster { opacity: 1; }
+
 .hero-3d::before {
   content: "";
   position: absolute;
