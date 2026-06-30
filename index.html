@@ -92,10 +92,11 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- AOS — async yükle (render-blocking olmasın) -->
+  <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.4/dist/aos.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" /></noscript>
 
-  <!-- CSS modülleri -->
+  <!-- CSS modülleri (küçük, hızlı) -->
   <link rel="stylesheet" href="assets/css/tokens.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/layout.css" />
@@ -841,10 +842,10 @@
     <span class="wa-pulse"></span>
   </a>
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <!-- Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- AOS — async yükle -->
+  <script async src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Supabase — async yükle -->
+  <script async src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- App (ES module) -->
   <script type="module" src="assets/js/app.js"></script>
 </body>

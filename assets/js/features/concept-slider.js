@@ -94,7 +94,10 @@ export function initConcepSlider() {
     thumb.className = 'cs-thumb';
     thumb.setAttribute('aria-label', `${i + 1}. ${slide.title}`);
     thumb.dataset.index = i;
-    thumb.innerHTML = `<img src="${slide.src}" alt="" loading="lazy" width="80" height="56"/><span class="cs-thumb-num">${String(i + 1).padStart(2, '0')}</span>`;
+    // İlk 4 thumbnail normal, kalanlar lazy (slider çalışmaya başladıktan sonra)
+    const loading = i < 4 ? 'eager' : 'lazy';
+    const fetchpriority = i === 0 ? 'high' : 'auto';
+    thumb.innerHTML = `<img src="${slide.src}" alt="" loading="${loading}" fetchpriority="${fetchpriority}" width="80" height="56" decoding="async"/><span class="cs-thumb-num">${String(i + 1).padStart(2, '0')}</span>`;
     thumb.addEventListener('click', () => goTo(i, true));
     thumbs.appendChild(thumb);
   });
