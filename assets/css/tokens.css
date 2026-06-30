@@ -1,44 +1,72 @@
 /* =========================================================
-   Design Tokens
-   Tek kaynak: renkler, tipografi, spacing, motion
+   Design Tokens — Premium Dark + Gold/Brons
+   Mehmet Can Baykan Mimar
    ========================================================= */
 
 :root {
-  /* Renk paleti — toprak, taş, sıcak bej + lacivert aksan */
-  --bg: #f6f3ee;
-  --bg-alt: #ece7df;
-  --ink: #14110f;
-  --ink-2: #2a2622;
-  --ink-3: #4a443d;
-  --muted: #7a7167;
-  --line: #d8d1c5;
-  --line-2: #c2b9a8;
+  /* Yüzeyler — derin mat siyah, kademeli kontrast */
+  --bg: #0a0a0b;
+  --bg-soft: #111114;
+  --bg-elevated: #16161a;
+  --bg-overlay: rgba(10, 10, 11, 0.72);
 
-  --accent: #1f3a5f;
-  --accent-2: #b08a4a;
-  --accent-3: #8c5a2a;
+  /* Mürekkep */
+  --ink: #f4f1ea;
+  --ink-2: #d9d3c4;
+  --ink-3: #a39c8a;
+  --muted: #6f6859;
+  --line: rgba(244, 241, 234, 0.08);
+  --line-2: rgba(244, 241, 234, 0.16);
 
-  --dark: #14110f;
-  --dark-2: #1c1916;
+  /* Aksan — sıcak altın / brons */
+  --gold: #c9a45a;
+  --gold-2: #b08a3f;
+  --gold-3: #87682a;
+  --gold-glow: rgba(201, 164, 90, 0.35);
+  --bronze: #8c5a2a;
+
+  /* Koyu vurgu */
+  --dark: #050506;
+  --dark-2: #0f0f12;
 
   /* Geometri */
   --radius: 14px;
   --radius-lg: 22px;
   --radius-sm: 8px;
+  --radius-pill: 999px;
 
-  /* Gölgeler */
-  --shadow-sm: 0 1px 2px rgba(20, 17, 15, 0.06), 0 4px 14px rgba(20, 17, 15, 0.05);
-  --shadow: 0 4px 20px rgba(20, 17, 15, 0.08), 0 24px 60px rgba(20, 17, 15, 0.06);
-  --shadow-lg: 0 20px 50px rgba(20, 17, 15, 0.18);
+  /* Gölgeler — derin ama yumuşak */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.25);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 24px 60px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6), 0 60px 120px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 0 0 1px rgba(201, 164, 90, 0.25), 0 8px 40px rgba(201, 164, 90, 0.18);
 
   /* Geçişler */
-  --t-fast: 200ms cubic-bezier(.2,.7,.2,1);
-  --t: 400ms cubic-bezier(.2,.7,.2,1);
-  --t-slow: 800ms cubic-bezier(.2,.7,.2,1);
+  --t-fast: 200ms cubic-bezier(.2, .7, .2, 1);
+  --t: 400ms cubic-bezier(.2, .7, .2, 1);
+  --t-slow: 800ms cubic-bezier(.2, .7, .2, 1);
+  --t-cinema: 1200ms cubic-bezier(.83, 0, .17, 1);
 
   /* Tipografi */
   --serif: 'Cormorant Garamond', 'Times New Roman', serif;
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Display ölçekleri (fluid) */
+  --fs-display: clamp(2.8rem, 7vw, 6.5rem);
+  --fs-h1: clamp(2.2rem, 5vw, 4.2rem);
+  --fs-h2: clamp(1.8rem, 3.5vw, 3rem);
+  --fs-h3: clamp(1.3rem, 2vw, 1.8rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  /* Letter-spacing */
+  --ls-tight: -0.04em;
+  --ls-normal: -0.02em;
+  --ls-wide: 0.04em;
+  --ls-wider: 0.18em;
+  --ls-eyebrow: 0.32em;
 
   /* Spacing skalası (rem) */
   --space-1: 0.25rem;
@@ -50,8 +78,16 @@
   --space-7: 3rem;
   --space-8: 4rem;
   --space-9: 6rem;
+  --space-10: 8rem;
 
   /* Container */
-  --container-max: 1200px;
-  --container-padding: 28px;
+  --container-max: 1320px;
+  --container-padding: clamp(20px, 4vw, 40px);
+
+  /* Layer */
+  --z-canvas: -1;
+  --z-base: 1;
+  --z-nav: 50;
+  --z-modal: 100;
+  --z-toast: 200;
 }

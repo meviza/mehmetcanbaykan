@@ -46,19 +46,28 @@ export function formatDateTime(iso) {
   } catch { return iso; }
 }
 
-// Toast bildirimleri
+// Toast bildirimleri (premium)
 let toastContainer = null;
-export function toast(msg, type = 'info', ms = 3000) {
+const TOAST_ICONS = { success: '✓', error: '!', warn: '⚠', info: 'i' };
+export function toast(msg, type = 'info', ms = 4000) {
   if (!toastContainer) {
-    toastContainer = el('div', { class: 'toast-stack', id: 'toastStack' });
+    toastContainer = el('div', { class: 'toast-root', id: 'toastRoot', 'aria-live': 'polite' });
     document.body.appendChild(toastContainer);
   }
-  const t = el('div', { class: `toast toast-${type}` }, msg);
+  const t = el('div', { class: `toast toast-${type}` },
+    el('span', { class: 'toast-icon' }, TOAST_ICONS[type] || 'i'),
+    el('span', { class: 'toast-msg' }, msg),
+    el('button', { class: 'toast-close', 'aria-label': 'Kapat', onclick: () => dismiss(t) }, '×')
+  );
   toastContainer.appendChild(t);
-  setTimeout(() => {
-    t.style.opacity = '0';
-    setTimeout(() => t.remove(), 300);
-  }, ms);
+  requestAnimationFrame(() => t.classList.add('is-in'));
+  if (ms > 0) setTimeout(() => dismiss(t), ms);
+  return t;
+}
+function dismiss(t) {
+  t.classList.remove('is-in');
+  t.classList.add('is-out');
+  setTimeout(() => t.remove(), 300);
 }
 
 // Modal (basit)

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin.html
+Disallow: /404.html
 
-Sitemap: https://meviza.github.io/mehmetcanbaykan/sitemap.xml
+Sitemap: https://mehmetcanbaykan.com/sitemap.xml
