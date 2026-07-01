@@ -228,14 +228,25 @@ function openLightbox(i) {
   lb.classList.add('is-open');
   lb.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  // Eski aria-hidden kaldır — focusable elementler (butonlar) kullanılabilir olsun
+  if ('inert' in HTMLElement.prototype) {
+    document.querySelectorAll('body > *:not(#csLightbox):not(#toastRoot):not(.cookie-bar):not(.wa-float):not(.preloader)').forEach(el => {
+      el.setAttribute('inert', '');
+    });
+  }
   lb.addEventListener('transitionend', () => {
-    const img = lb.querySelector('.cs-lb-img');
-    if (img) img.focus?.();
+    const btn = lb.querySelector('.cs-lb-close');
+    if (btn) btn.focus?.();
   }, { once: true });
   // Close sonrası body overflow geri
   const observer = new MutationObserver(() => {
     if (!lb.classList.contains('is-open')) {
       document.body.style.overflow = '';
+      if ('inert' in HTMLElement.prototype) {
+        document.querySelectorAll('[inert]').forEach(el => {
+          if (!el.classList.contains('cookie-bar')) el.removeAttribute('inert');
+        });
+      }
       observer.disconnect();
     }
   });

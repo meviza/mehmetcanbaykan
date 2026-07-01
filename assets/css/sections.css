@@ -506,7 +506,7 @@
 }
 .footer-contact a:hover { color: var(--gold); }
 .footer-contact small {
-  color: var(--muted);
+  color: var(--ink-3);
   font-size: 12px;
   margin-top: 16px;
   display: block;

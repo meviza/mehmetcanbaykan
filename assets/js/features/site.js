@@ -25,25 +25,28 @@ export function initSiteChrome() {
   const burger = $('#navBurger');
   const links = $('#navLinks');
   if (burger && links) {
+    const setNavOpen = (open) => {
+      burger.classList.toggle('is-open', open);
+      links.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      // Modern: inert attribute focusable elementleri devre dışı bırakır
+      if ('inert' in HTMLElement.prototype) {
+        if (open) links.removeAttribute('inert');
+        else links.setAttribute('inert', '');
+      } else {
+        links.setAttribute('aria-hidden', String(!open));
+      }
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
     burger.addEventListener('click', () => {
-      const isOpen = burger.classList.toggle('is-open');
-      links.classList.toggle('is-open');
-      burger.setAttribute('aria-expanded', isOpen);
-      links.setAttribute('aria-hidden', !isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      setNavOpen(!burger.classList.contains('is-open'));
     });
     links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        burger.classList.remove('is-open');
-        links.classList.remove('is-open');
-        burger.setAttribute('aria-expanded', 'false');
-        links.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      });
+      a.addEventListener('click', () => setNavOpen(false));
     });
     burger.setAttribute('aria-expanded', 'false');
     burger.setAttribute('aria-controls', 'navLinks');
-    links.setAttribute('aria-hidden', 'true');
+    setNavOpen(false);
   }
 
   // Smooth scroll
