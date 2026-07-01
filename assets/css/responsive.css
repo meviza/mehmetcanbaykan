@@ -13,7 +13,10 @@ body {
   padding-bottom: env(safe-area-inset-bottom, 0);
   -webkit-text-size-adjust: 100%;
   max-width: 100vw;
+  position: relative;
 }
+main, .landing-root { max-width: 100vw; overflow-x: clip; }
+section, .section, .hero, .nav, .footer { max-width: 100vw; overflow-x: clip; }
 img, video, canvas, svg { max-width: 100%; height: auto; }
 button, a, input, select, textarea, [role="button"] {
   min-height: 44px;
