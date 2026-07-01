@@ -1,74 +1,47 @@
 /* =========================================================
-   Design Tokens — Premium Dark + Gold/Brons
-   Mehmet Can Baykan Mimar
+   Tema Sistemi — Tenant bazlı, JSON-driven
+   ─────────────────────────────────────────────────────────
+   --color-primary, --font-serif gibi tüm renkler
+   ve fontlar :root seviyesinde set edilir.
+   Component'ler bunları kullanır → beyaz etiket native.
    ========================================================= */
 
 :root {
-  /* Yüzeyler — derin mat siyah, kademeli kontrast */
-  --bg: #0a0a0b;
-  --bg-soft: #111114;
-  --bg-elevated: #16161a;
-  --bg-overlay: rgba(10, 10, 11, 0.72);
+  /* === RENKLER (default = MCB dark gold) === */
+  --color-primary: #c9a45a;
+  --color-primary-2: #b08a3f;
+  --color-primary-3: #87682a;
+  --color-primary-glow: rgba(201, 164, 90, 0.35);
 
-  /* Mürekkep */
-  --ink: #f4f1ea;
-  --ink-2: #d9d3c4;
-  --ink-3: #b3ac9a;
-  --muted: #8a8270;
-  --line: rgba(244, 241, 234, 0.08);
-  --line-2: rgba(244, 241, 234, 0.16);
+  --color-bg: #0a0a0b;
+  --color-bg-soft: #111114;
+  --color-bg-elevated: #16161a;
 
-  /* Aksan — sıcak altın / brons */
-  --gold: #c9a45a;
-  --gold-2: #b08a3f;
-  --gold-3: #87682a;
-  --gold-glow: rgba(201, 164, 90, 0.35);
-  --bronze: #8c5a2a;
+  --color-ink: #f4f1ea;
+  --color-ink-2: #d9d3c4;
+  --color-ink-3: #b3ac9a;
+  --color-muted: #8a8270;
 
-  /* Koyu vurgu */
-  --dark: #050506;
-  --dark-2: #0f0f12;
+  --color-line: rgba(244, 241, 234, 0.08);
+  --color-line-2: rgba(244, 241, 234, 0.16);
 
-  /* Geometri */
-  --radius: 14px;
-  --radius-lg: 22px;
+  --color-success: #4ade80;
+  --color-warn: #d9b95e;
+  --color-error: #d97a5e;
+  --color-info: #6cb4ff;
+
+  /* === FONTLAR === */
+  --font-serif: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* === RADII === */
   --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
   --radius-pill: 999px;
 
-  /* Gölgeler — derin ama yumuşak */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.25);
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 24px 60px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.6), 0 60px 120px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 0 0 1px rgba(201, 164, 90, 0.25), 0 8px 40px rgba(201, 164, 90, 0.18);
-
-  /* Geçişler */
-  --t-fast: 200ms cubic-bezier(.2, .7, .2, 1);
-  --t: 400ms cubic-bezier(.2, .7, .2, 1);
-  --t-slow: 800ms cubic-bezier(.2, .7, .2, 1);
-  --t-cinema: 1200ms cubic-bezier(.83, 0, .17, 1);
-
-  /* Tipografi */
-  --serif: 'Cormorant Garamond', 'Times New Roman', serif;
-  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-
-  /* Display ölçekleri (fluid) */
-  --fs-display: clamp(2.8rem, 7vw, 6.5rem);
-  --fs-h1: clamp(2.2rem, 5vw, 4.2rem);
-  --fs-h2: clamp(1.8rem, 3.5vw, 3rem);
-  --fs-h3: clamp(1.3rem, 2vw, 1.8rem);
-  --fs-body: 1rem;
-  --fs-small: 0.875rem;
-  --fs-tiny: 0.75rem;
-
-  /* Letter-spacing */
-  --ls-tight: -0.04em;
-  --ls-normal: -0.02em;
-  --ls-wide: 0.04em;
-  --ls-wider: 0.18em;
-  --ls-eyebrow: 0.32em;
-
-  /* Spacing skalası (rem) */
+  /* === SPACING === */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -80,14 +53,81 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
-  /* Container */
+  /* === SHADOWS === */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3), 0 4px 14px rgba(0,0,0,0.2);
+  --shadow: 0 4px 20px rgba(0,0,0,0.4), 0 24px 60px rgba(0,0,0,0.3);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.5), 0 60px 120px rgba(0,0,0,0.4);
+  --shadow-gold: 0 0 0 1px rgba(201, 164, 90, 0.25), 0 8px 40px rgba(201, 164, 90, 0.18);
+
+  /* === TRANSITIONS === */
+  --t-fast: 200ms cubic-bezier(.2,.7,.2,1);
+  --t: 400ms cubic-bezier(.2,.7,.2,1);
+  --t-slow: 800ms cubic-bezier(.2,.7,.2,1);
+
+  /* === TYPE SCALE === */
+  --fs-display: clamp(2.8rem, 7vw, 6.5rem);
+  --fs-h1: clamp(2.2rem, 5vw, 4.2rem);
+  --fs-h2: clamp(1.8rem, 3.5vw, 3rem);
+  --fs-h3: clamp(1.3rem, 2vw, 1.8rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tiny: 0.75rem;
+
+  /* === LAYOUT === */
   --container-max: 1320px;
   --container-padding: clamp(20px, 4vw, 40px);
 
-  /* Layer */
+  /* === Z-INDEX === */
   --z-canvas: -1;
   --z-base: 1;
   --z-nav: 50;
   --z-modal: 100;
   --z-toast: 200;
+}
+
+/* === OVERRIDES (tenant theme uygulandığında JS set eder) === */
+[data-theme="light"] {
+  --color-bg: #f6f3ee;
+  --color-bg-soft: #ece7df;
+  --color-bg-elevated: #ffffff;
+  --color-ink: #14110f;
+  --color-ink-2: #2a2622;
+  --color-ink-3: #4a443d;
+  --color-muted: #7a7167;
+  --color-line: rgba(20, 17, 15, 0.08);
+  --color-line-2: rgba(20, 17, 15, 0.16);
+}
+
+/* === LEGACY ALIASES (eski --bg, --ink vs. → yeni --color-*'ya yönlendir)
+   Mevcut CSS'lerin çalışmaya devam etmesi için. === */
+:root {
+  --bg: var(--color-bg);
+  --bg-soft: var(--color-bg-soft);
+  --bg-alt: var(--color-bg-soft);
+  --bg-elevated: var(--color-bg-elevated);
+
+  --ink: var(--color-ink);
+  --ink-2: var(--color-ink-2);
+  --ink-3: var(--color-ink-3);
+  --muted: var(--color-muted);
+
+  --line: var(--color-line);
+  --line-2: var(--color-line-2);
+
+  --accent: var(--color-primary);
+  --accent-2: var(--color-primary-2);
+  --accent-3: var(--color-primary-3);
+
+  --dark: var(--color-bg);
+  --dark-2: var(--color-bg-soft);
+
+  --gold: var(--color-primary);
+  --gold-2: var(--color-primary-2);
+  --gold-3: var(--color-primary-3);
+  --gold-glow: var(--color-primary-glow);
+
+  /* Eski token isimleri → yeni font tokens */
+  --serif: var(--font-serif);
+  --sans: var(--font-sans);
+  --mono: var(--font-mono);
 }
