@@ -18,6 +18,7 @@ const PRECACHE = [
   '/',
   '/index.html',
   '/admin.html',
+  '/dashboard.html',
   '/404.html',
   '/manifest.json',
   '/assets/css/tokens.css',

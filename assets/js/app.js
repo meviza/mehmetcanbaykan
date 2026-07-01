@@ -1,77 +1,65 @@
 /**
- * Ana sayfa girişi
+ * Landing Page — Ana giriş noktası
+ * ─────────────────────────────────────────────────────────
+ * Yaşam döngüsü:
+ *   1) loadTenant()  → tema + SEO uygula
+ *   2) mountLanding() → DOM section'ları oluştur
+ *   3) initSiteChrome() → nav, mobile menu, smooth scroll
+ *   4) mountWhatsAppFloat() → sabit WA butonu
+ *   5) initCookieBar() → KVKK bar
+ *   6) scheduleHero3D() → idle'da Three.js yükle
+ *   7) hidePreloader()
+ *   8) Service Worker kayıt (HTTPS)
+ * ─────────────────────────────────────────────────────────
+ * ES Modules, require() YOK.
  */
-import { initSiteChrome } from './features/site.js';
-import { initProjects } from './features/projects.js';
-import { initContactForm } from './features/contact.js';
-import { initHero3D } from './features/hero3d.js';
-import { initConcepSlider } from './features/concept-slider.js';
-import { initFaq } from './features/faq.js';
-import { initCookieBar } from './features/cookie-bar.js';
-import { loadAnalytics } from './lib/analytics.js';
-import './lib/db.js'; // Supabase client başlat
-
-function hidePreloader() {
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    // En az 1.2s göster ki UI flash olmasın
-    const elapsed = performance.now();
-    const minDelay = Math.max(0, 1200 - elapsed);
-    setTimeout(() => preloader.classList.add('is-done'), 300 + minDelay);
-  }
-}
+import { loadTenant } from './lib/tenant.js';
+import { mountLanding } from './features/landing/landing-builder.js';
+import { initSiteChrome } from './features/landing/site-chrome.js';
+import { mountWhatsAppFloat } from './features/landing/wa-float.js';
+import { initCookieBar } from './features/landing/cookie-bar.js';
+import { loadThree, scheduleIdleWork } from './lib/three-loader.js';
 
 async function init() {
-  initCookieBar();
-  initSiteChrome();
-  initContactForm();
-  initConcepSlider();
-  initFaq();
-  await initProjects();
+  // 1) Tenant
+  await loadTenant();
 
-  if (window.AOS) window.AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
+  // 2) Section'ları mount et — main container, mount fonksiyonu id bazlı çalışır
+  await mountLanding(document.getElementById('main'));
+
+  // 3-5) Chrome + WA + Cookie
+  initSiteChrome();
+  mountWhatsAppFloat();
+  initCookieBar();
+
+  // 6) Hero 3D — idle'da yükle
+  scheduleHero3D();
+
+  // 7) Preloader gizle
   hidePreloader();
 
-  // Analytics — ID varsa yükle
-  loadAnalytics();
-
-  // Service Worker — sadece HTTPS'te kayıt ol
-  if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(reg => {
-          // Güncelleme kontrolü (her saat)
-          setInterval(() => reg.update(), 60 * 60 * 1000);
-        })
-        .catch(err => console.warn('SW kayıt hatası:', err));
-    });
-  }
-
-  // 3D Hero — render-blocking olmasın diye idle'da veya interaction sonrası yükle
-  scheduleHero3D();
+  // 8) Service Worker
+  registerSW();
 }
 
 function scheduleHero3D() {
-  const hero3d = document.getElementById('hero3d');
-  if (!hero3d) return;
+  const container = document.getElementById('hero3d');
+  if (!container) return;
 
-  const start = () => {
-    loadThree()
-      .then(() => initHero3D(hero3d))
-      .catch(err => {
-        console.warn('Three.js yüklenemedi:', err);
-        hero3d.classList.add('hero3d-fallback');
-      });
+  const start = async () => {
+    try {
+      await loadThree();
+      const mod = await import('./features/hero3d.js');
+      mod.initHero3D(container);
+    } catch (err) {
+      console.warn('Three.js yüklenemedi, fallback aktif:', err);
+      container.classList.add('hero3d-fallback');
+    }
   };
 
-  // Idle'da yükle (LCP için kritik olan metin + slider hemen görünür)
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(start, { timeout: 2000 });
-  } else {
-    setTimeout(start, 200);
-  }
+  scheduleIdleWork(start, 2000);
 
-  // Kullanıcı scroll ederse veya 3 saniye beklerse zorla yükle
+  // İlk scroll/touch sonrası zorla başlat
   let started = false;
   const forceStart = () => {
     if (started) return;
@@ -85,20 +73,20 @@ function scheduleHero3D() {
   setTimeout(forceStart, 3000);
 }
 
-let threeLoadPromise = null;
-function loadThree() {
-  if (window.THREE) return Promise.resolve();
-  if (threeLoadPromise) return threeLoadPromise;
-  threeLoadPromise = new Promise((resolve, reject) => {
-    const s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js';
-    s.async = true;
-    s.defer = true;
-    s.onload = resolve;
-    s.onerror = reject;
-    document.head.appendChild(s);
+function hidePreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  const minDelay = Math.max(0, 1200 - performance.now());
+  setTimeout(() => preloader.classList.add('is-done'), 300 + minDelay);
+}
+
+function registerSW() {
+  if (!('serviceWorker' in navigator) || location.protocol !== 'https:') return;
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => setInterval(() => reg.update(), 60 * 60 * 1000))
+      .catch(err => console.warn('SW kayıt hatası:', err));
   });
-  return threeLoadPromise;
 }
 
 if (document.readyState === 'loading') {

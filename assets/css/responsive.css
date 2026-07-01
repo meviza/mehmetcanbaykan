@@ -1,0 +1,285 @@
+/* =========================================================
+   Responsive — Mobile-First (480 → 600 → 768 → 900 → 1200)
+   ─────────────────────────────────────────────────────────
+   Token tabanlı: tüm renk/spacing --color-*, --space-*, --fs-*
+   Sadece override katmanı — base/components tarafından yüklenir.
+   ========================================================= */
+
+/* === GLOBAL MOBİL GÜVENLİK (her zaman aktif) === */
+html, body { overflow-x: hidden; }
+body {
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  -webkit-text-size-adjust: 100%;
+}
+img, video, canvas, svg { max-width: 100%; height: auto; }
+button, a, input, select, textarea, [role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+/* === BASE OVERRIDES (mobile-first default) === */
+.projects, .services, .services-grid, .stats, .stats-grid,
+.about-grid, .process, .related-grid, .team-grid, .testimonials-grid,
+.contact-grid, .form-row, .map-card { grid-template-columns: 1fr; gap: var(--space-4); }
+.footer-inner, .footer-grid { grid-template-columns: 1fr; gap: var(--space-5); text-align: left; }
+.section { padding: var(--space-7) 0; }
+
+/* === 480px+ (küçük telefon) === */
+@media (min-width: 480px) {
+  .container, .container-fluid { padding-left: var(--space-5); padding-right: var(--space-5); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .wa-float { width: 48px; height: 48px; bottom: 16px; right: 16px; }
+  .wa-float svg { width: 22px; height: 22px; }
+  .toast-root { left: 12px; right: 12px; bottom: 12px; }
+  .toast { min-width: 0; max-width: none; }
+}
+
+/* === 600px+ (büyük telefon / phablet) === */
+@media (min-width: 600px) {
+  .nav { padding: var(--space-3) var(--space-5); }
+  .hero-title, .hero-content h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); }
+  .modal-card, .modal-content {
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cookie-bar { left: 12px; right: 12px; bottom: 12px; padding: 16px; }
+  .cookie-actions { width: 100%; }
+  .cookie-btn { flex: 1; }
+  .cookie-inner { flex-direction: column; align-items: stretch; }
+  .footer-grid, .footer-inner { grid-template-columns: 1fr 1fr; }
+  .stats, .stats-grid { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr 1fr; }
+  .form-row.full { grid-template-columns: 1fr; }
+}
+
+/* === 768px+ (tablet) === */
+@media (min-width: 768px) {
+  .container, .container-fluid { padding-left: var(--space-6); padding-right: var(--space-6); }
+  .hero-3d { display: none; }
+  .hero-title, .hero-content h1 { font-size: clamp(2.6rem, 5vw, 4rem); }
+  .hero-content p, .hero-sub { font-size: 1.1rem; }
+  .projects, .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .services, .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table { min-width: 600px; }
+  .modal-card, .modal-content { max-width: 560px; }
+  .section { padding: var(--space-8) 0; }
+  .cs-arrow { width: 44px; height: 44px; }
+  .cs-img-wrap { width: 90%; }
+  .footer-grid, .footer-inner { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .map-card { grid-template-columns: 1fr; }
+}
+
+/* === 900px+ (küçük desktop — hamburger kapat, canvas aç) === */
+@media (min-width: 900px) {
+  .nav { padding: var(--space-4) var(--space-6); }
+  .nav-links, .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    height: auto;
+    transform: none;
+    box-shadow: none;
+  }
+  .nav-burger, .nav-toggle { display: none; }
+  .nav-cta { display: inline-flex; }
+  .hero-3d { display: block; }
+  .hero { grid-template-columns: 1fr 1fr; min-height: 90vh; }
+  .hero-title, .hero-content h1 { font-size: clamp(3rem, 5vw, 4.6rem); }
+  .projects { grid-template-columns: repeat(3, 1fr); }
+  .related-grid { grid-template-columns: repeat(3, 1fr); }
+  .stats, .stats-grid { grid-template-columns: repeat(4, 1fr); }
+  .about-grid { grid-template-columns: 1fr 1fr; gap: var(--space-7); }
+  .contact-grid { grid-template-columns: 1fr 1.2fr; }
+  .map-card { grid-template-columns: 1fr 1.4fr; }
+  .modal-card, .modal-content { max-width: 640px; }
+  .dash-layout { flex-direction: row; }
+  .dash-sidebar {
+    width: 260px;
+    min-height: 100dvh;
+    border-bottom: none;
+    border-right: 1px solid var(--color-line);
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    overflow-y: auto;
+  }
+  .dash-sidebar-toggle { display: none; }
+  .dash-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* === 1200px+ (geniş desktop) === */
+@media (min-width: 1200px) {
+  .container, .container-fluid { max-width: var(--container-max); }
+  .hero-title, .hero-content h1 { font-size: var(--fs-h1); }
+  .section { padding: var(--space-9) 0; }
+  .nav { padding: var(--space-4) var(--space-7); }
+  .dash-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =========================================================
+   HERO — Mobile'da 3D canvas devre dışı (enerji tasarrufu)
+   ========================================================= */
+.hero-3d, .hero-canvas, .hero-3d-skeleton, .hero-grain { display: none; }
+.hero-inner, .hero-content { grid-template-columns: 1fr; gap: var(--space-5); text-align: center; }
+.hero-title, .hero-content h1 {
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+.hero-content p, .hero-sub { font-size: 1rem; margin-bottom: var(--space-5); color: var(--color-ink-2); }
+.hero-actions, .hero-cta {
+  display: flex; flex-direction: column; gap: var(--space-3); align-items: stretch;
+}
+.hero-actions .btn, .hero-cta .btn { width: 100%; }
+.hero-meta-panel { display: none; }
+
+/* =========================================================
+   CONCEPT SLIDER — Touch-friendly, < 480px thumb gizli
+   ========================================================= */
+.cs-stage { aspect-ratio: 4 / 3; height: clamp(340px, 60vw, 560px); }
+.cs-img-wrap { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius-md); overflow: hidden; }
+.cs-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.cs-thumbs { display: none; }
+.cs-arrow {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(10, 10, 11, 0.6); border: 1px solid var(--color-line-2); color: var(--color-ink);
+}
+@media (min-width: 600px) {
+  .cs-thumbs {
+    display: flex; gap: var(--space-2); margin-top: var(--space-3);
+    overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .cs-thumbs::-webkit-scrollbar { display: none; }
+  .cs-thumb { width: 80px; height: 56px; }
+}
+
+/* =========================================================
+   FORM — iOS zoom engelleme (16px minimum), padding 12px+
+   ========================================================= */
+input, select, textarea {
+  width: 100%;
+  font-size: 16px;
+  min-height: 44px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+}
+textarea { min-height: 120px; resize: vertical; }
+.form-row .btn { width: 100%; }
+
+/* =========================================================
+   MODAL — Bottom-sheet < 600px, center > 600px
+   ========================================================= */
+.modal {
+  position: fixed; inset: 0; z-index: var(--z-modal);
+  display: none; align-items: flex-end; justify-content: center;
+  background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px);
+}
+.modal.is-open, .modal[open] { display: flex; }
+.modal-card, .modal-content {
+  width: 100%;
+  max-height: 92dvh; overflow-y: auto;
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--space-5) var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom, 0));
+  animation: slideUp 0.3s cubic-bezier(.2,.7,.2,1);
+}
+.modal-close {
+  position: absolute; top: var(--space-3); right: var(--space-3);
+  width: 44px; height: 44px; display: grid; place-items: center;
+  background: transparent; border: 0; color: var(--color-ink);
+  font-size: 1.5rem; cursor: pointer;
+}
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+/* =========================================================
+   TABLE — Yatay scroll container < 768px
+   ========================================================= */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm);
+}
+.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: var(--fs-small); }
+.table th, .table td { padding: var(--space-3); text-align: left; border-bottom: 1px solid var(--color-line); }
+.table th { background: var(--color-bg-soft); font-weight: 600; position: sticky; top: 0; z-index: 1; }
+
+/* =========================================================
+   NAV-TOGGLE (hamburger fallback — section CSS yoksa)
+   ========================================================= */
+.nav-toggle {
+  display: grid; place-items: center; width: 44px; height: 44px;
+  background: transparent; border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm); cursor: pointer; color: var(--color-ink);
+}
+.nav-menu { display: none; }
+.nav-menu.is-open { display: flex; flex-direction: column; gap: 0; padding: var(--space-4) var(--space-5); }
+.nav-menu a { min-height: 48px; display: flex; align-items: center; padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--color-line); }
+
+/* =========================================================
+   FOOTER — Stack < 600px, safe-area bottom
+   ========================================================= */
+.footer { padding: var(--space-6) var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom, 0)); }
+.footer-bottom {
+  display: flex; flex-direction: column; gap: var(--space-3);
+  text-align: center; padding-top: var(--space-5); margin-top: var(--space-5);
+  border-top: 1px solid var(--color-line); color: var(--color-muted); font-size: var(--fs-small);
+}
+@media (min-width: 768px) {
+  .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; }
+}
+
+/* =========================================================
+   DASHBOARD / ADMIN (sidebar collapse < 900px)
+   ========================================================= */
+.dash-layout { display: flex; flex-direction: column; min-height: 100dvh; }
+.dash-sidebar {
+  width: 100%; background: var(--color-bg-elevated);
+  border-bottom: 1px solid var(--color-line); padding: var(--space-4);
+}
+.dash-main { flex: 1; padding: var(--space-4); min-width: 0; }
+.dash-cards { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+.dash-card { padding: var(--space-4); background: var(--color-bg-soft); border-radius: var(--radius-md); }
+.dash-sidebar-toggle {
+  display: flex; align-items: center; gap: var(--space-2);
+  width: 100%; min-height: 44px; padding: var(--space-3);
+  background: transparent; border: 1px solid var(--color-line);
+  border-radius: var(--radius-sm); color: var(--color-ink); cursor: pointer;
+}
+
+/* =========================================================
+   UTILITY — breakpoint bazlı görünürlük
+   ========================================================= */
+.hide-mobile { display: none; }
+@media (min-width: 768px) { .hide-mobile { display: initial; } }
+@media (min-width: 900px) { .hide-tablet { display: none; } }
+.show-mobile-only { display: initial; }
+@media (min-width: 900px) { .show-mobile-only { display: none; } }
+
+/* =========================================================
+   REDUCED MOTION + COARSE POINTER (performans)
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+  .hero-3d, .hero-canvas { display: none; }
+}
+@media (max-width: 899px) and (pointer: coarse) {
+  .hero-3d, .hero-canvas { display: none; }
+}

@@ -1,0 +1,77 @@
+/* =========================================================
+   Print — Temiz çıktı: sadece içerik, serif, beyaz bg
+   ========================================================= */
+@media print {
+  .nav, .nav-menu, .nav-toggle, .nav-links, .nav-burger, .nav-cta,
+  .footer, .footer-inner, .footer-grid, .footer-bottom,
+  .hero-3d, .hero-canvas, .hero-3d-skeleton, .hero-grain,
+  .cookie-bar, .toast, .toast-root,
+  .modal, .modal-card, .modal-overlay, .modal-content,
+  .sidebar, .dash-sidebar, .sa-sidebar, .sa-burger, .sa-topbar,
+  .wa-float, .wa-pulse,
+  .form, .form-row, .btn, button,
+  .aos-init, .aos-animate,
+  .skip-link, .cursor, .cursor-follower,
+  .nav-cta, .nav-cta-wrap,
+  .cs-controls, .cs-thumbs, .cs-arrow,
+  .lightbox, .cs-lightbox,
+  [data-aos] {
+    display: none !important;
+  }
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: 'Cormorant Garamond', 'Times New Roman', Georgia, serif !important;
+    font-size: 11pt;
+    line-height: 1.45;
+    overflow: visible !important;
+  }
+  .container, .container-fluid, .dash-main, main, article, section,
+  .hero, .hero-inner, .section, .blog-post, .error-page {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', 'Times New Roman', Georgia, serif !important;
+    color: #000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  h1 { font-size: 22pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 13pt; }
+  h4 { font-size: 12pt; }
+  p, li, span, div { color: #000 !important; }
+  a { color: #000 !important; text-decoration: underline; }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #444;
+    word-break: break-all;
+  }
+  img { max-width: 100% !important; height: auto !important; page-break-inside: avoid; break-inside: avoid; }
+  figure, blockquote { page-break-inside: avoid; break-inside: avoid; }
+  table, .table-wrap, .table, .related-grid, .form-row {
+    page-break-inside: avoid; break-inside: avoid;
+    border-collapse: collapse;
+  }
+  .table, table { border: 1px solid #999; }
+  .table th, .table td, table th, table td {
+    border: 1px solid #999;
+    padding: 6pt 8pt;
+    color: #000 !important;
+    background: transparent !important;
+  }
+  .table th, table th { background: #eee !important; font-weight: 700; }
+  pre, code, .equation {
+    font-family: 'Courier New', monospace !important;
+    background: #f4f4f4 !important;
+    color: #000 !important;
+    border: 1px solid #ddd;
+    padding: 4pt 6pt;
+  }
+  @page { margin: 1.5cm; size: A4; }
+  @page :first { margin-top: 1cm; }
+}

@@ -1,0 +1,93 @@
+/* =========================================================
+   landing-components.css — Cookie bar, toast, wa-float, a11y
+   ========================================================= */
+
+/* === COOKIE BAR ============================================== */
+.cookie-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 80;
+  background: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-line);
+  padding: 1rem 0;
+  transform: translateY(100%);
+  transition: transform var(--t);
+}
+.cookie-bar.is-in { transform: translateY(0); }
+.cookie-bar.is-out { transform: translateY(110%); }
+.cookie-inner { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+.cookie-text { flex: 1; min-width: 240px; }
+.cookie-text strong { color: var(--color-ink); display: block; margin-bottom: .25rem; }
+.cookie-text p { color: var(--color-ink-3); font-size: .85rem; margin: 0; }
+.cookie-text a { color: var(--color-primary); }
+.cookie-actions { display: flex; gap: .5rem; }
+.cookie-btn {
+  background: transparent; border: 1px solid var(--color-line-2);
+  color: var(--color-ink); padding: .55rem 1rem; border-radius: var(--radius-sm);
+  font-size: .82rem; cursor: pointer; transition: all var(--t-fast);
+  font-family: inherit;
+}
+.cookie-btn.cookie-accept { background: var(--color-primary); color: var(--color-bg); border-color: var(--color-primary); }
+.cookie-btn.cookie-accept:hover { background: var(--color-primary-2); }
+.cookie-btn.cookie-reject:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+@media (max-width: 600px) {
+  .cookie-inner { flex-direction: column; align-items: stretch; }
+  .cookie-actions { width: 100%; }
+  .cookie-btn { flex: 1; }
+}
+
+/* === TOAST =================================================== */
+.toast-root { position: fixed; top: 1.5rem; right: 1.5rem; z-index: var(--z-toast); display: flex; flex-direction: column; gap: .5rem; pointer-events: none; }
+.toast {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-line-2);
+  border-left: 3px solid var(--color-primary);
+  color: var(--color-ink);
+  padding: .9rem 1.1rem;
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; gap: .8rem;
+  min-width: 240px; max-width: 360px;
+  box-shadow: var(--shadow);
+  opacity: 0; transform: translateX(20px);
+  transition: opacity var(--t-fast), transform var(--t-fast);
+  pointer-events: auto;
+  font-size: .9rem;
+}
+.toast.is-in { opacity: 1; transform: translateX(0); }
+.toast.is-out { opacity: 0; transform: translateX(20px); }
+.toast-icon { width: 24px; height: 24px; display: grid; place-items: center; flex-shrink: 0; }
+.toast-success { border-left-color: var(--color-success); }
+.toast-success .toast-icon { color: var(--color-success); }
+.toast-error { border-left-color: var(--color-error); }
+.toast-error .toast-icon { color: var(--color-error); }
+.toast-info { border-left-color: var(--color-info); }
+.toast-info .toast-icon { color: var(--color-info); }
+.toast-warn { border-left-color: var(--color-warn); }
+.toast-warn .toast-icon { color: var(--color-warn); }
+.toast-close { background: none; border: 0; color: var(--color-ink-3); cursor: pointer; padding: 0; margin-left: auto; font-size: 1.1rem; }
+.toast-close:hover { color: var(--color-ink); }
+
+/* === WHATSAPP FLOAT ========================================== */
+.wa-float {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 60;
+  width: 56px; height: 56px;
+  background: #25d366; color: #fff;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  text-decoration: none; box-shadow: var(--shadow);
+  transition: transform var(--t-fast);
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-pulse {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: #25d366; opacity: .4;
+  animation: waPulse 2s infinite;
+  pointer-events: none;
+}
+@keyframes waPulse { 0% { transform: scale(1); opacity: .4; } 100% { transform: scale(1.5); opacity: 0; } }
+@media (max-width: 600px) { .wa-float { width: 50px; height: 50px; } }
+
+/* === ACCESSIBILITY =========================================== */
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

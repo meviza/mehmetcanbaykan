@@ -1,0 +1,11 @@
+/* =========================================================
+   landing.css — Section aggregator (yalnızca @import)
+   ─────────────────────────────────────────────────────────
+   Atomic component library ile uyumlu.
+   Tüm renk/font/radius tokens.css'ten (--color-*, --font-*)
+   ========================================================= */
+
+@import url('./landing/landing-base.css');
+@import url('./landing/landing-sections.css');
+@import url('./landing/landing-features.css');
+@import url('./landing/landing-components.css');

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#06070b" />
+  <title>SUPER ADMIN | Platform Control</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/print.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/super-admin.css" />
+</head>
+<body class="sa-body">
+
+  <div class="sa-login" id="saLogin">
+    <div class="sa-login-card">
+      <div class="sa-login-glow"></div>
+      <div class="sa-login-mark">
+        <span class="sa-mark">SA</span>
+        <span class="sa-badge-pulse">SUPER ADMIN</span>
+      </div>
+      <h1>Platform Control</h1>
+      <p>Yönetim paneline erişmek için super admin hesabınızla giriş yapın.</p>
+      <form id="saLoginForm" autocomplete="off">
+        <label>
+          <span>E-posta</span>
+          <input type="email" name="email" required autocomplete="username" placeholder="admin@..." />
+        </label>
+        <label>
+          <span>Şifre</span>
+          <input type="password" name="password" required autocomplete="current-password" />
+        </label>
+        <button type="submit" class="sa-btn sa-btn-primary sa-btn-full">Erişim Sağla</button>
+        <p class="sa-login-status" id="saLoginStatus" role="status" aria-live="polite"></p>
+      </form>
+      <div class="sa-login-foot">
+        <a href="dashboard.html">← Tenant Dashboard</a>
+        <a href="index.html">Site</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sa-shell" id="saShell" hidden>
+    <button class="sa-burger" id="saBurger" aria-label="Menüyü aç/kapat">
+      <span></span><span></span><span></span>
+    </button>
+
+    <aside class="sa-sidebar" id="saSidebar">
+      <div class="sa-sidebar-brand">
+        <span class="sa-mark">SA</span>
+        <div>
+          <strong>Platform</strong>
+          <small><span class="sa-dot"></span>SUPER ADMIN</small>
+        </div>
+      </div>
+
+      <nav class="sa-nav" aria-label="Süper admin menüsü">
+        <a href="#metrics" class="sa-nav-item" data-view="metrics">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+          Global Metrics
+        </a>
+        <a href="#tenants" class="sa-nav-item" data-view="tenants">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+          Tenants
+        </a>
+        <a href="#users" class="sa-nav-item" data-view="users">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Users
+        </a>
+        <a href="#audit" class="sa-nav-item" data-view="audit">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Audit Log
+        </a>
+        <a href="#health" class="sa-nav-item" data-view="health">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          System Health
+        </a>
+      </nav>
+
+      <div class="sa-sidebar-foot">
+        <div class="sa-user">
+          <div class="sa-user-avatar" id="saUserAvatar">SA</div>
+          <div>
+            <strong id="saUserName">—</strong>
+            <small id="saUserEmail">—</small>
+          </div>
+        </div>
+        <button class="sa-btn sa-btn-ghost sa-btn-sm" id="saLogoutBtn">Oturumu Kapat</button>
+      </div>
+    </aside>
+
+    <main class="sa-main">
+      <header class="sa-topbar">
+        <div>
+          <span class="sa-topbar-eyebrow">SUPER ADMIN</span>
+          <h2 id="saViewTitle">Global Metrics</h2>
+          <small id="saViewSub">Platform genel görünüm</small>
+        </div>
+        <div class="sa-topbar-right">
+          <span class="sa-state" id="saConnectionState"><span class="sa-dot"></span>Çevrimdışı</span>
+          <a href="dashboard.html" class="sa-btn sa-btn-ghost sa-btn-sm">Dashboard</a>
+        </div>
+      </header>
+
+      <section class="sa-view" id="saView-metrics" hidden></section>
+      <section class="sa-view" id="saView-tenants" hidden></section>
+      <section class="sa-view" id="saView-users" hidden></section>
+      <section class="sa-view" id="saView-audit" hidden></section>
+      <section class="sa-view" id="saView-health" hidden></section>
+
+      <div class="sa-forbidden" id="saForbidden" hidden>
+        <div class="sa-forbidden-card">
+          <div class="sa-forbidden-code">403</div>
+          <h1>Bu sayfaya erişim yetkiniz yok</h1>
+          <p>Bu alan yalnızca <code>super_admin</code> rolündeki kullanıcılara açıktır. Mevcut hesabınız bu alana erişim yetkisine sahip değil.</p>
+          <div class="sa-forbidden-actions">
+            <a href="dashboard.html" class="sa-btn sa-btn-primary">Tenant Dashboard</a>
+            <a href="index.html" class="sa-btn sa-btn-ghost">Siteye Dön</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="sa-toast-root" id="saToastRoot" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script type="module" src="assets/js/super-admin.js"></script>
+</body>
+</html>
