@@ -5,7 +5,7 @@
 
 import { getClient } from '../../lib/db.js';
 import { signIn, signOut, getSession } from '../../lib/auth.js';
-import { $ } from '../../lib/components/atoms.js';
+import { $ } from '../../lib/ui.js';
 import { toast } from '../../lib/components/modal.js';
 import { switchView, bindNav, currentView } from './router.js';
 
