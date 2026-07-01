@@ -7,8 +7,8 @@ import { el } from '../../../lib/components/index.js';
 export function buildConcepts({ concepts }) {
   const slides = (concepts && concepts.length) ? concepts : FALLBACK_CONCEPTS;
 
-  const stage = el('div', { class: 'cs-stage' },
-    el('div', { class: 'cs-track', id: 'csTrack' }),
+  const stage = el('div', { class: 'cs-stage', style: { maxWidth: '100%', overflow: 'hidden' } },
+    el('div', { class: 'cs-track', id: 'csTrack', style: { maxWidth: '100%' } }),
     el('div', { class: 'cs-controls' },
       el('button', { class: 'cs-arrow cs-prev', 'aria-label': 'Önceki',
         html: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>'
@@ -26,7 +26,7 @@ export function buildConcepts({ concepts }) {
     )
   );
 
-  const thumbs = el('div', { class: 'cs-thumbs', id: 'csThumbs' });
+  const thumbs = el('div', { class: 'cs-thumbs', id: 'csThumbs', style: { maxWidth: '100%' } });
   const lightbox = el('div', { class: 'cs-lightbox', id: 'csLightbox',
     'aria-hidden': 'true', role: 'dialog', 'aria-label': 'Konsept önizleme' },
     el('button', { class: 'cs-lb-close', 'aria-label': 'Kapat' }, '×'),
