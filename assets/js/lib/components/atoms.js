@@ -83,8 +83,8 @@ export function Badge({ count }) {
   return el('span', { class: 'badge' }, String(count));
 }
 
-/* ---------- Helper el() — re-export from ui for atomic components ---------- */
-function el(tag, attrs = {}, ...children) {
+/* ---------- Helper el() — exported for atomic components ---------- */
+export function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
     if (k === 'class') node.className = v;
