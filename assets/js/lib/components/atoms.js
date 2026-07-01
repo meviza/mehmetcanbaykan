@@ -67,7 +67,7 @@ const PILL_MAP = {
   published: 'published', draft: 'draft',
   // Türkçe fallback'ler
   yeni: 'new', okundu: 'read', yanitlandi: 'replied', arsiv: 'archived',
-  acik: 'open', tamamlandi: 'done', devam-ediyor: 'open',
+  acik: 'open', tamamlandi: 'done', 'devam-ediyor': 'open',
   iptal: 'archived', hazirlik: 'open', basvuruldu: 'open',
   incelemede: 'open', 'eksik-evrak': 'open', onaylandi: 'done',
   reddedildi: 'archived', taslak: 'draft'
