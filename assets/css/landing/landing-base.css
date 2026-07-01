@@ -119,15 +119,21 @@ main { display: block; }
     padding: 2.5rem var(--container-padding);
     transform: translateX(100%);
     visibility: hidden;
-    transition: transform var(--t), visibility 0s var(--t);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--t), visibility 0s var(--t), opacity var(--t);
     z-index: 49;
     width: 100vw;
     max-width: 100vw;
+    /* Scroll genişliğini etkilemesin */
+    contain: layout;
   }
   .nav-links.is-open {
     transform: translateX(0);
     visibility: visible;
-    transition: transform var(--t), visibility 0s;
+    opacity: 1;
+    pointer-events: auto;
+    transition: transform var(--t), visibility 0s, opacity var(--t);
   }
   .nav-links a { font-size: 1.4rem; font-family: var(--font-serif); }
   .nav-cta { display: none; }

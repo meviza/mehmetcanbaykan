@@ -80,6 +80,9 @@ button, a, input, select, textarea, [role="button"] {
   .footer-grid, .footer-inner { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
   .map-card { grid-template-columns: 1fr; }
+  /* Konsept slider 3D perspektif sınırları — viewport'tan taşmasın */
+  .cs-stage, .cs-track { max-width: 100%; overflow: hidden; }
+  .cs-root, .concept-slider { max-width: 100%; }
 }
 
 /* === 900px+ (küçük desktop — hamburger kapat, canvas aç) === */
