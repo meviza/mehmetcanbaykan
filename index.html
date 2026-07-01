@@ -193,14 +193,7 @@
     ],
     "sameAs": [
       "https://www.instagram.com/mimarmehmetcanbaykan"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "1",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+    ]
   }
   </script>
 
@@ -393,6 +386,8 @@
 
 <body>
 
+  <a href="#main" class="skip-link">İçeriğe geç</a>
+
   <div class="preloader" id="preloader">
     <div class="preloader-inner">
       <div class="preloader-mark">MCB</div>
@@ -427,6 +422,7 @@
   </header>
 
   <!-- HERO — 3D Sahne -->
+  <main id="main">
   <section class="hero" id="home">
     <div class="hero-3d" id="hero3d" aria-hidden="true">
       <div class="hero-3d-skeleton" aria-hidden="true">
@@ -736,22 +732,22 @@
           <p class="form-sub">Formu doldurun, WhatsApp üzerinden yanıt vereyim.</p>
 
           <div class="form-row">
-            <label>
+            <label for="cf-name">
               <span>Ad Soyad *</span>
-              <input type="text" name="name" required autocomplete="name" />
+              <input id="cf-name" type="text" name="name" required autocomplete="name" />
             </label>
-            <label>
+            <label for="cf-phone">
               <span>Telefon *</span>
-              <input type="tel" name="phone" required autocomplete="tel" placeholder="+90 5xx xxx xx xx" />
+              <input id="cf-phone" type="tel" name="phone" required autocomplete="tel" placeholder="+90 5xx xxx xx xx" />
             </label>
           </div>
-          <label>
+          <label for="cf-email">
             <span>E-posta</span>
-            <input type="email" name="email" autocomplete="email" />
+            <input id="cf-email" type="email" name="email" autocomplete="email" />
           </label>
-          <label>
+          <label for="cf-service">
             <span>Proje Türü *</span>
-            <select name="service" required>
+            <select id="cf-service" name="service" required>
               <option value="">Seçiniz</option>
               <option>Restorasyon</option>
               <option>İç Tasarım / İç Mimari</option>
@@ -762,17 +758,17 @@
               <option>Diğer</option>
             </select>
           </label>
-          <label>
+          <label for="cf-message">
             <span>Mesajınız *</span>
-            <textarea name="message" rows="4" required placeholder="Arsa bilgisi, m², beklentiler, zamanlama..."></textarea>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="Arsa bilgisi, m², beklentiler, zamanlama..."></textarea>
           </label>
-          <label class="form-kvkk">
-            <input type="checkbox" name="kvkk" required />
+          <label class="form-kvkk" for="cf-kvkk">
+            <input id="cf-kvkk" type="checkbox" name="kvkk" required />
             <span><a href="#gizlilik">KVKK aydınlatma metnini</a> okudum, kabul ediyorum.</span>
           </label>
           <button type="submit" class="btn btn-primary btn-full">
             <span>WhatsApp ile Gönder</span>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
           </button>
           <p class="form-note">Form WhatsApp'a yönlendirir ve mesajınız güvenle kaydedilir.</p>
         </form>
@@ -828,6 +824,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container footer-inner">

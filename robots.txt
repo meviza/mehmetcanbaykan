@@ -1,11 +1,32 @@
+# Mehmet Can Baykan Mimar
+# Production: https://mehmetcanbaykan.com (custom domain)
+# Vercel alias: https://mehmet-can-baykan-mimar.vercel.app
+
 User-agent: *
 Allow: /
+
+# Disallow — admin & error
 Disallow: /admin.html
 Disallow: /404.html
+Disallow: /*.json$  # Supabase anon key içermez ama gizli kalsın
+Disallow: /sw.js    # service worker
+
+# AI botlar — opsiyonel olarak izin ver (SEO için genelde iyi)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
 
 # Sitemap
-Sitemap: https://mehmetcanbaykan-mimar.vercel.app/sitemap.xml
 Sitemap: https://mehmetcanbaykan.com/sitemap.xml
+Sitemap: https://mehmet-can-baykan-mimar.vercel.app/sitemap.xml
 
-# Crawl-delay (opsiyonel)
+# IndexNow API key
+# https://www.bing.com/indexnow — instant indexing
+
+# Crawl-delay (nazik ol)
 Crawl-delay: 1

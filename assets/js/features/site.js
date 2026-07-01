@@ -26,15 +26,24 @@ export function initSiteChrome() {
   const links = $('#navLinks');
   if (burger && links) {
     burger.addEventListener('click', () => {
-      burger.classList.toggle('is-open');
+      const isOpen = burger.classList.toggle('is-open');
       links.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', isOpen);
+      links.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     links.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         burger.classList.remove('is-open');
         links.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        links.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
       });
     });
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-controls', 'navLinks');
+    links.setAttribute('aria-hidden', 'true');
   }
 
   // Smooth scroll
@@ -52,7 +61,7 @@ export function initSiteChrome() {
 
   initCustomCursor();
   initCounters();
-  initHeroTilt();
+  initScrollSpy();
   initMagneticButtons();
   initParallax();
 }
@@ -117,19 +126,33 @@ function initCounters() {
   counters.forEach(c => obs.observe(c));
 }
 
-// Hero kart 3B tilt
-function initHeroTilt() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  const card = $('.hero-card-inner');
-  const parent = card?.parentElement;
-  if (!card || !parent) return;
-  parent.addEventListener('mousemove', e => {
-    const r = parent.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - 0.5;
-    const y = (e.clientY - r.top) / r.height - 0.5;
-    card.style.transform = `rotate(${y * -4}deg) rotateX(${y * -6}deg) rotateY(${x * 6}deg)`;
-  });
-  parent.addEventListener('mouseleave', () => { card.style.transform = ''; });
+// Scroll spy — nav link'lerine aria-current ekle
+function initScrollSpy() {
+  const links = $$('.nav-links a[href^="#"]');
+  if (!links.length) return;
+
+  const sections = links
+    .map(l => document.querySelector(l.getAttribute('href')))
+    .filter(Boolean);
+
+  if (!('IntersectionObserver' in window)) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = '#' + entry.target.id;
+        links.forEach(l => {
+          if (l.getAttribute('href') === id) {
+            l.setAttribute('aria-current', 'true');
+          } else {
+            l.removeAttribute('aria-current');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(s => obs.observe(s));
 }
 
 // Magnetic butonlar

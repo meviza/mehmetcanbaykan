@@ -8,6 +8,7 @@ import { initHero3D } from './features/hero3d.js';
 import { initConcepSlider } from './features/concept-slider.js';
 import { initFaq } from './features/faq.js';
 import { initCookieBar } from './features/cookie-bar.js';
+import { loadAnalytics } from './lib/analytics.js';
 import './lib/db.js'; // Supabase client başlat
 
 function hidePreloader() {
@@ -30,6 +31,21 @@ async function init() {
 
   if (window.AOS) window.AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
   hidePreloader();
+
+  // Analytics — ID varsa yükle
+  loadAnalytics();
+
+  // Service Worker — sadece HTTPS'te kayıt ol
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => {
+          // Güncelleme kontrolü (her saat)
+          setInterval(() => reg.update(), 60 * 60 * 1000);
+        })
+        .catch(err => console.warn('SW kayıt hatası:', err));
+    });
+  }
 
   // 3D Hero — render-blocking olmasın diye idle'da veya interaction sonrası yükle
   scheduleHero3D();

@@ -116,6 +116,8 @@
 }
 .nav-links a:hover { color: var(--gold); }
 .nav-links a:hover::after { width: 100%; }
+.nav-links a[aria-current="true"] { color: var(--gold); }
+.nav-links a[aria-current="true"]::after { width: 100%; }
 .nav-cta {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--gold);

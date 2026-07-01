@@ -1,0 +1,46 @@
+<!-- 
+  GOOGLE SEARCH CONSOLE DOĞRULAMA
+  =================================
+  
+  ADIMLAR:
+  1. https://search.google.com/search-console → "URL öneki" → https://mehmetcanbaykan.com/ ekle
+  2. "Diğer doğrulama yöntemleri" → "HTML etiketi" seç
+  3. Verilen meta etiketini aşağıya yapıştır
+  4. Bu dosyayı /google-site-verification.html olarak kaydet
+  5. Siteye yükle → Search Console'da "Doğrula" tıkla
+  
+  KULLANIM:
+  Bu dosyayı indirip ismini "googleXXXXX.html" olarak değiştir.
+  Google'ın verdiği içerik-tag doğrulama için meta tag kullanılır:
+  
+  ÖRNEK (Google sana benzer bir şey verecek):
+  <meta name="google-site-verification" content="abc123def456..." />
+-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Search Console Doğrulama</title>
+  <!-- 
+    Google'ın verdiği doğrulama meta etiketini buraya yapıştır.
+    Henüz yoksa boş bırak, sayfa yine de çalışır.
+  -->
+  <meta name="google-site-verification" content="BURAYA_GOOGLE_KODU" />
+  <meta name="robots" content="noindex, nofollow" />
+</head>
+<body>
+  <h1>Google Search Console Doğrulama Sayfası</h1>
+  <p>Bu sayfa Google Search Console doğrulaması içindir.</p>
+  <p>Tarayıcıda şu adresi açın: <code>https://mehmetcanbaykan.com/google-site-verification.html</code></p>
+  <hr>
+  <h2>Hızlı Adımlar</h2>
+  <ol>
+    <li><a href="https://search.google.com/search-console">Search Console'a git</a></li>
+    <li>URL öneki olarak <code>https://mehmetcanbaykan.com/</code> ekle</li>
+    <li>"HTML etiketi" doğrulama yöntemini seç</li>
+    <li>Google'ın verdiği meta tag'ı yukarıdaki <code>content</code> alanına yapıştır</li>
+    <li>Bu dosyayı <code>google-site-verification.html</code> adıyla kaydet</li>
+    <li>Vercel'e push'la → Search Console'da "Doğrula" tıkla</li>
+  </ol>
+</body>
+</html>
