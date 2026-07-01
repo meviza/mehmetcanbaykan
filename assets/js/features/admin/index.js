@@ -121,3 +121,10 @@ export function getAllState() {
   // Cross-module state export (dashboard için)
   return {};
 }
+
+// Auto-init — sayfa yüklendiğinde admin'i başlat
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => initAdmin().catch(err => console.error('initAdmin:', err)));
+} else {
+  initAdmin().catch(err => console.error('initAdmin:', err));
+}
