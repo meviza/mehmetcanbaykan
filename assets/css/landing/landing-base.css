@@ -64,7 +64,8 @@ main { display: block; }
   border-bottom-color: var(--color-line);
   padding: .7rem 0;
 }
-.nav-inner { display: flex; align-items: center; gap: 2rem; }
+.nav-inner { display: flex; align-items: center; gap: 2rem; max-width: 100%; min-width: 0; }
+.container-fluid { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
 .brand { display: flex; align-items: center; gap: .75rem; text-decoration: none; color: var(--color-ink); }
 .brand-mark {
   width: 38px; height: 38px;
