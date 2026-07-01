@@ -38,8 +38,8 @@ async function init() {
   // 7) Preloader gizle
   hidePreloader();
 
-  // 8) Service Worker
-  registerSW();
+  // 8) Service Worker — geçici devre dışı (cache sorunu)
+  // registerSW();
 }
 
 function scheduleHero3D() {
