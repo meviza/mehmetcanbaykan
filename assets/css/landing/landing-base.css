@@ -58,13 +58,22 @@ main { display: block; }
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
   transition: background var(--t-fast), border-color var(--t-fast), padding var(--t-fast);
+  width: 100%;
+  max-width: 100vw;
 }
 .nav.is-scrolled {
   background: rgba(10, 10, 11, 0.88);
   border-bottom-color: var(--color-line);
   padding: .7rem 0;
 }
-.nav-inner { display: flex; align-items: center; gap: 2rem; width: 100%; min-width: 0; max-width: 1320px; margin: 0 auto; padding: 0 var(--container-padding); }
+.nav-inner {
+  display: flex; align-items: center; gap: 1.5rem;
+  width: 100%; min-width: 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  overflow: hidden;
+}
 .container-fluid { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
 .nav > .nav-inner > * { min-width: 0; flex-shrink: 1; }
 .nav-inner > .brand { flex-shrink: 0; }
